@@ -13,4 +13,10 @@ class Alimento
   end
 
 
+  def to_s
+  
+    "(#{@nombre}, #{@proteinas}, #{@carbohidratos}, #{@lipidos}, #{@gei}, #{@terreno})"
+
+  end
+
 end
