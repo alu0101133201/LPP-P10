@@ -3,6 +3,7 @@ RSpec.describe Pract6 do
   before (:all) do
 
     @alimento1 = Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
+    @alimento2 = Alimento.new("Cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
 
   end
 
@@ -31,9 +32,12 @@ RSpec.describe Pract6 do
   context "Probando métodos relativos a valor energético" do
 
     it "Obtención de información calórica de un elemento" do
-
       expect(@alimento1.energia(100)).to eq(82.8)      
-
     end
+
+    it "Comparación para saber si un elemento es más calórico que otro" do
+      expect(@alimento1.energia_mayor(@alimento2)).to eq(true)
+    end
+
   end
 end
