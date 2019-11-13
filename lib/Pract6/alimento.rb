@@ -19,4 +19,12 @@ class Alimento
 
   end
 
+  def energia(cantidad)
+
+    (@proteinas*4.0) + (@carbohidratos*4.0) + (@lipidos*9.0)
+
+  end
+
+
+
 end
