@@ -25,6 +25,17 @@ class Alimento
 
   end
 
+  def energia_mayor(alimento)
 
+    raise TypeError, "Se espera como argumento un alimento" unless alimento.is_a?Alimento
+
+    if(energia(100) > alimento.energia(100))
+      return true
+ 
+    else
+      return false
+    end
+ 
+  end
 
 end
