@@ -21,5 +21,11 @@ RSpec.describe Pract6 do
 
     end
 
+    it "El método to_s funciona correctamente" do
+
+      expect(@alimento1.to_s).to eq("Tofu, 8.0, 1.9, 4.8, 2.0, 2.2")
+
+    end
+
   end
 end
