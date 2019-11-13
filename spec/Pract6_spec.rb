@@ -26,6 +26,14 @@ RSpec.describe Pract6 do
       expect(@alimento1.to_s).to eq("(Tofu, 8.0, 1.9, 4.8, 2.0, 2.2)")
 
     end
+  end
 
+  context "Probando métodos relativos a valor energético" do
+
+    it "Obtención de información calórica de un elemento" do
+
+      expect(@alimento1.energia(100)).to eq(82.8)      
+
+    end
   end
 end
