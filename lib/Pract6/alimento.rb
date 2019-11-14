@@ -43,7 +43,7 @@ class Alimento
 
   def energia(cantidad)
 
-    (@proteinas*4.0) + (@carbohidratos*4.0) + (@lipidos*9.0)
+    (prot(cantidad)*4.0) + (ch(cantidad)*4.0) + (lip(cantidad)*9.0)
 
   end
 
@@ -61,3 +61,7 @@ class Alimento
   end
 
 end
+
+
+
+

@@ -5,10 +5,14 @@ RSpec.describe Pract6 do
     @alimento1 = Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
     @alimento2 = Alimento.new("Cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
     @alimento3 = Alimento.new("Cerdo", 21.5, 0.0, 6.3, 7.6, 11.0)
+    @alimento4 = Alimento.new("Queso", 25.0, 1.3, 33.0, 11.0, 41.0)
 
-
-    array_alimentos = [ [@alimento1,150], [@alimento2,250], [@alimento3,500] ]
-
+    array1_alimentos = [ [@alimento1,1000], [@alimento2,500], [@alimento3,1500] ]
+    array2_alimentos = [ [@alimento1,1200], [@alimento4,500] ]
+    array3_alimentos = [ [@alimento1,200], [@alimento4,50] ]
+    array1_solucion_h = [107.5,188.5]
+    array2_solucion_h = [79,231.4]
+    array3_solucion_h = [-1,-1]
 
   end
 
@@ -56,4 +60,15 @@ RSpec.describe Pract6 do
 
   end
 
+  context "Probando las funciones relativas al impacto ambiental diario" do
+
+    it "El calculo del impacto ambiental - hombre funciona correctamente" do
+    
+      expect(impacto_ambiental_h(array1_alimentos)).to eq (array1_solucion_h)      
+      expect(impacto_ambiental_h(array2_alimentos)).to eq (array2_solucion_h)      
+      expect(impacto_ambiental_h(array3_alimentos)).to eq (array3_solucion_h)      
+
+    end
+
+  end
 end
