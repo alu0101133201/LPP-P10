@@ -7,12 +7,23 @@ RSpec.describe Pract6 do
     @alimento3 = Alimento.new("Cerdo", 21.5, 0.0, 6.3, 7.6, 11.0)
     @alimento4 = Alimento.new("Queso", 25.0, 1.3, 33.0, 11.0, 41.0)
 
-    @array1_alimentos = [ [@alimento1,1000], [@alimento2,500], [@alimento3,1500] ]
-    @array2_alimentos = [ [@alimento1,1200], [@alimento4,500] ]
-    @array3_alimentos = [ [@alimento1,200], [@alimento4,50] ]
+    @array1_alimentos = [ [@alimento1,1000.0], [@alimento2,500.0], [@alimento3,1500.0] ]
+    @array2_alimentos = [ [@alimento1,1200.0], [@alimento4,500.0] ]
+    @array3_alimentos = [ [@alimento1,200.0], [@alimento4,50.0] ]
     @array1_solucion_h = [135.2,188.1]
     @array2_solucion_h = [79,231.4]
     @array3_solucion_h = [-1,-1]
+
+
+    @array4_alimentos = [ [@alimento1,700.0], [@alimento2,400.0], [@alimento3,1250.0] ]
+    @array5_alimentos = [ [@alimento1,1000.0], [@alimento4,370.0] ]
+    @array6_alimentos = [ [@alimento1,200.0], [@alimento4,50.0] ]
+
+
+    @array4_solucion_m = [109.96,153.78]
+    @array5_solucion_m = [60.7,173.7]
+    @array6_solucion_m = [-1,-1]
+
 
   end
 
@@ -69,6 +80,17 @@ RSpec.describe Pract6 do
       expect(impacto_ambiental_h(@array3_alimentos)).to eq (@array3_solucion_h)      
 
     end
+
+    it "El calculo del impacto ambiental - mujer funciona correctamente" do
+
+
+      expect(impacto_ambiental_m(@array4_alimentos)).to eq (@array4_solucion_m)      
+      expect(impacto_ambiental_m(@array5_alimentos)).to eq (@array5_solucion_m)      
+      expect(impacto_ambiental_m(@array6_alimentos)).to eq (@array6_solucion_m)      
+   
+   end
+  
+
 
   end
 end
