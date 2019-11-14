@@ -6,6 +6,9 @@
 
 ------------------------------------------
 
+## Asignatura:
+  Lenguajes y paradigmas de programación (LPP). 3º GII - ULL
+
 ## Email: 
  alu0101133201@ull.edu.es
 
@@ -29,6 +32,7 @@
 ├── lib
 │   ├── Pract6
 │   │   ├── alimento.rb
+│   │   ├── funciones_ambientales.rb
 │   │   └── version.rb
 │   └── Pract6.rb
 ├── Pract6.gemspec

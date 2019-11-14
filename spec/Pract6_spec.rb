@@ -18,8 +18,6 @@ RSpec.describe Pract6 do
     @array4_alimentos = [ [@alimento1,700.0], [@alimento2,400.0], [@alimento3,1250.0] ]
     @array5_alimentos = [ [@alimento1,1000.0], [@alimento4,370.0] ]
     @array6_alimentos = [ [@alimento1,200.0], [@alimento4,50.0] ]
-
-
     @array4_solucion_m = [109.96,153.78]
     @array5_solucion_m = [60.7,173.7]
     @array6_solucion_m = [-1,-1]
