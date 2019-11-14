@@ -1,22 +1,22 @@
-#Práctica 06
+# Práctica 06
 ------------------------------------------
 
-##Nombre: 
+## Nombre: 
  Sergio Guerra Arencibia.
 
 ------------------------------------------
 
-##Email: 
+## Email: 
  alu0101133201@ull.edu.es
 
 ------------------------------------------
 
-##Descripción: 
+## Descripción: 
  En esta práctica trabajaremos el desarrollo dirigido por pruebas a priori (TDD)
 
 -----------------------------------------
 
-##Árbol de directorios:
+## Árbol de directorios:
 
 ```bash
 

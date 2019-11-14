@@ -4,6 +4,11 @@ RSpec.describe Pract6 do
 
     @alimento1 = Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
     @alimento2 = Alimento.new("Cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
+    @alimento3 = Alimento.new("Cerdo", 21.5, 0.0, 6.3, 7.6, 11.0)
+
+
+    array_alimentos = [ [@alimento1,150], [@alimento2,250], [@alimento3,500] ]
+
 
   end
 
@@ -18,6 +23,17 @@ RSpec.describe Pract6 do
       expect(@alimento1.lipidos).to eq(4.8)      
       expect(@alimento1.gei).to eq(2.0)      
       expect(@alimento1.terreno).to eq(2.2)      
+
+    end
+
+    if "Los getters por cantidad funcionan correctamente" do
+
+      expect(@alimento1.prot(200)).to eq(16.0)      
+      expect(@alimento1.ch(200)).to eq(4.8)      
+      expect(@alimento1.lip(200)).to eq(9.6)      
+      expect(@alimento1.g(200)).to eq(4.0)      
+      expect(@alimento1.t(200)).to eq(4.4)      
+
 
     end
 
@@ -39,4 +55,5 @@ RSpec.describe Pract6 do
     end
 
   end
+
 end
