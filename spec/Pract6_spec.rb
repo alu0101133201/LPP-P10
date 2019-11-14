@@ -8,7 +8,6 @@ RSpec.describe Pract6 do
   end
 
 
-
   context "Probando los getters y el to_s" do     	
 
     it "Instanciación correcta del objeto alimento" do
