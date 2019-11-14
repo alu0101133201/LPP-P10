@@ -12,6 +12,28 @@ class Alimento
 
   end
 
+  def prot(cantidad)
+    return(@proteinas*(cantidad/100))  
+  end
+
+  def ch(cantidad)
+    return(@carbohidratos*(cantidad/100))
+  end
+
+  def lip(cantidad)
+    return(@lipidos*(cantidad/100))
+  end
+
+  def g(cantidad)
+    return(@gei*(cantidad/100))
+  end
+
+  def t(cantidad)
+    return(@terreno*(cantidad/100))
+  end
+
+
+
 
   def to_s
   

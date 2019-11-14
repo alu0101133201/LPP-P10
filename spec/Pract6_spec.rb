@@ -26,10 +26,10 @@ RSpec.describe Pract6 do
 
     end
 
-    if "Los getters por cantidad funcionan correctamente" do
+    it "Los getters por cantidad funcionan correctamente" do
 
       expect(@alimento1.prot(200)).to eq(16.0)      
-      expect(@alimento1.ch(200)).to eq(4.8)      
+      expect(@alimento1.ch(200)).to eq(3.8)      
       expect(@alimento1.lip(200)).to eq(9.6)      
       expect(@alimento1.g(200)).to eq(4.0)      
       expect(@alimento1.t(200)).to eq(4.4)      
