@@ -96,7 +96,7 @@ RSpec.describe Pract6 do
     
     it "Instanciación correcta del objeto nodo" do
   
-      expect(@nodo1.value).to eq("15")
+      expect(@nodo1.value).to eq(15)
       expect(@nodo1.next).to eq(nil)      
       expect(@nodo1.prev).to eq(nil)      
       
