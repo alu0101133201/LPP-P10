@@ -22,6 +22,8 @@ RSpec.describe Pract6 do
     @array5_solucion_m = [60.7,173.7]
     @array6_solucion_m = [-1,-1]
 
+    @nodo1 = Nodo.new(15,nil,nil)
+
 
   end
 
@@ -87,9 +89,17 @@ RSpec.describe Pract6 do
       expect(impacto_ambiental_m(@array6_alimentos)).to eq (@array6_solucion_m)      
   
  
-   end
-  
-
-
+   end 
   end
+
+  context "Probando la clase nodo"
+    
+    it "Instanciación correcta del objeto nodo" do
+  
+      expect(@nodo1.value).to eq("15")
+      expect(@nodo1.next).to eq(nil)      
+      expect(@nodo1.prev).to eq(nil)      
+      
+
+    end
 end
