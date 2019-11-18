@@ -85,7 +85,8 @@ RSpec.describe Pract6 do
       expect(impacto_ambiental_m(@array4_alimentos)).to eq (@array4_solucion_m)      
       expect(impacto_ambiental_m(@array5_alimentos)).to eq (@array5_solucion_m)      
       expect(impacto_ambiental_m(@array6_alimentos)).to eq (@array6_solucion_m)      
-   
+  
+ 
    end
   
 

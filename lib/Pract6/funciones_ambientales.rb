@@ -5,7 +5,6 @@ def impacto_ambiental_h(alimentos)
   gei = 0
   terreno = 0
 
-
   for i in alimentos
 
     proteinas += i[0].prot(i[1])
