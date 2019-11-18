@@ -23,7 +23,7 @@ RSpec.describe Pract6 do
     @array6_solucion_m = [-1,-1]
 
     @nodo1 = Nodo.new(15,nil,nil)
-
+    @lista1 = Lista_doblemente_enlazada.new
 
   end
 
@@ -92,7 +92,7 @@ RSpec.describe Pract6 do
    end 
   end
 
-  context "Probando la clase nodo"
+  context "Probando la clase nodo" do
     
     it "Instanciación correcta del objeto nodo" do
   
@@ -102,4 +102,19 @@ RSpec.describe Pract6 do
       
 
     end
+  end
+  
+  context "Probando la clase lista" do
+
+    it "Instanciación correcta de la lista" do
+
+      expect(@lista1.head).to eq(nil)
+      expect(@lista1.tail).to eq(nil)
+
+    end
+  end
+
+
 end
+
+
