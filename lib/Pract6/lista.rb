@@ -1,6 +1,6 @@
 #Definicióin de clase que implementa una lista doblemente enlazada
 
-class Lista_doblemente_enlazada
+class Lista
 
   attr_reader :head, :tail
 

@@ -1,4 +1,4 @@
-RSpec.describe Pract6 do
+RSpec.describe Alimento do
 
   before (:all) do
 
@@ -22,8 +22,6 @@ RSpec.describe Pract6 do
     @array5_solucion_m = [60.7,173.7]
     @array6_solucion_m = [-1,-1]
 
-    @nodo1 = Nodo.new(15,nil,nil)
-    @lista1 = Lista_doblemente_enlazada.new
 
   end
 
@@ -91,20 +89,43 @@ RSpec.describe Pract6 do
  
    end 
   end
+end
 
-  context "Probando la clase nodo" do
-    
-    it "Instanciación correcta del objeto nodo" do
+
+RSpec.describe Nodo do
+
+  before (:all) do
   
+    @nodo1 = Nodo.new(15,nil,nil)
+
+  end
+
+  context "Pruebas básicas de la clase nodo" do
+   
+   it "Instanciación correcta del objeto nodo" do
+ 
       expect(@nodo1.value).to eq(15)
       expect(@nodo1.next).to eq(nil)      
       expect(@nodo1.prev).to eq(nil)      
-      
 
     end
+
   end
+end
+
+
+
+
+RSpec.describe Lista do
+ 
+
+ before (:all) do
   
-  context "Probando la clase lista" do
+    @lista1 = Lista.new
+
+  end
+
+  context "Pruebas básicas de la clase lista" do
 
     it "Instanciación correcta de la lista" do
 
@@ -112,9 +133,12 @@ RSpec.describe Pract6 do
       expect(@lista1.tail).to eq(nil)
 
     end
+
   end
 
-
 end
+
+
+
 
 

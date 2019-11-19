@@ -32,6 +32,8 @@
 ├── Gemfile.lock
 ├── lib
 │   ├── Pract6
+│   │   ├── nodo.rb
+│   │   ├── lista_d_e.rb
 │   │   ├── alimento.rb
 │   │   ├── funciones_ambientales.rb
 │   │   └── version.rb
