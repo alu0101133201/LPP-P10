@@ -11,6 +11,4 @@ class Lista
     
   end
 
-
-
 end

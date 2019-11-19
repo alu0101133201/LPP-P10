@@ -42,6 +42,9 @@ guard :rspec, cmd: "bundle exec rspec" do
 
   # Feel free to open issues for suggestions and improvements
 
+  watch(%r{^lib/Pract6/(.+)\.rb$}) { dsl.rspec.spec_dir }
+
+
   # RSpec files
   rspec = dsl.rspec
   watch(rspec.spec_helper) { rspec.spec_dir }
