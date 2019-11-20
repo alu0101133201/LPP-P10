@@ -130,6 +130,8 @@ RSpec.describe Lista do
     @nodo4 = Nodo.new(2,nil,nil)
     @nodo5 = Nodo.new(1,nil,nil)
     @nodo6 = Nodo.new(100,nil,nil)
+    @nodo7 = Nodo.new(55,nil,nil)
+    @nodo8 = Nodo.new(17,nil,nil)
 
     @nodo10 = Nodo.new(50,nil,nil)
   end
@@ -172,6 +174,10 @@ RSpec.describe Lista do
       
       @lista1.insertar_multi_head([@nodo4,@nodo5,@nodo6])
       expect(@lista1.to_s).to eq("2,1,100,0,20,15")
+      @lista1.insertar_multi_tail([@nodo7,@nodo8])
+      expect(@lista1.to_s).to eq("2,1,100,0,20,15,55,17")
+
+
 
     end
 
