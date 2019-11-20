@@ -12,6 +12,31 @@ class Lista
   end
 
 
+  def to_s
+
+    string = "" 
+    x = @head
+
+    while x.next != nil
+      aux = @head.value
+      string << "#{aux},"
+      x = x.next
+    end
+
+    string << "#{x.value}"
+  
+  return string 
+
+
+  end
+
+
+
+
+
+
+
+
   def vacia
   
     if(@head == nil)
