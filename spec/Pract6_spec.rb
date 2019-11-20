@@ -126,13 +126,12 @@ RSpec.describe Lista do
 
     @nodo1 = Nodo.new(15,nil,nil)
     @nodo2 = Nodo.new(20,nil,nil)
-    @nodo3 = Nodo.new(3,nil,nil)
-    @nodo4 = Nodo.new(0,nil,nil)
+    @nodo3 = Nodo.new(0,nil,nil)
+    @nodo4 = Nodo.new(2,nil,nil)
     @nodo5 = Nodo.new(1,nil,nil)
     @nodo6 = Nodo.new(100,nil,nil)
 
-    array_nodos = [@nodo3,@nodo4,@nodo5,@nodo6]
-
+    @nodo10 = Nodo.new(50,nil,nil)
   end
 
   context "Pruebas básicas de la clase lista" do
@@ -151,7 +150,8 @@ RSpec.describe Lista do
     it "Prueba de que se puede insertar un elemento en la lista" do
       
       @lista1.insertar_cabeza(@nodo1)
-      @lista2.insertar_cola(@nodo2)
+    
+      @lista2.insertar_cola(@nodo10)
           
       expect(@lista1.vacia).to eq(false)
       expect(@lista2.vacia).to eq(false)
@@ -160,7 +160,8 @@ RSpec.describe Lista do
     it "Prueba de que el to_s funciona" do
 
       @lista1.insertar_cabeza(@nodo2)
-      expect(@lista1.to_s).to eq("20,15")      
+      @lista1.insertar_cabeza(@nodo3)
+      expect(@lista1.to_s).to eq("0,20,15")      
 
     end
   end
@@ -169,8 +170,8 @@ RSpec.describe Lista do
 
     it "Prueba de que sepueden insertar varios elementos en la lista" do
       
-      insertar_multi_head(array_nodos)
-      expect(@lista.to_s).to eq("3,0,1,100,20,15")
+      @lista1.insertar_multi_head([@nodo4,@nodo5,@nodo6])
+      expect(@lista1.to_s).to eq("2,1,100,0,20,15")
 
     end
 

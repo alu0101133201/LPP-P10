@@ -18,7 +18,7 @@ class Lista
     x = @head
 
     while x.next != nil
-      aux = @head.value
+      aux = x.value
       string << "#{aux},"
       x = x.next
     end
@@ -29,13 +29,6 @@ class Lista
 
 
   end
-
-
-
-
-
-
-
 
   def vacia
   
@@ -55,16 +48,14 @@ class Lista
      if(@head == nil)
         @head = x
         @tail = x
-
-     else
-      
-      x.next = @head
+    
+    else 
       @head.prev = x
+      x.next = @head
       @head = x
 
-     end
   end
-
+end
   
   def insertar_cola(x)
 
@@ -84,5 +75,12 @@ class Lista
 
   end
 
+
+  def insertar_multi_head(array)
+
+    array.reverse.each { |x| insertar_cabeza(x) }
+
+
+  end
   
 end
