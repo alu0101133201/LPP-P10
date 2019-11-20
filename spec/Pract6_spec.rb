@@ -151,6 +151,13 @@ RSpec.describe Lista do
       expect(@lista2.vacia).to eq(false)
     end
 
+    it "Prueba de que el to_s funciona" do
+
+      @lista1.insertar_cabeza(@nodo2)
+      expect(@lista1.to_s).to eq("20,15")      
+
+    end
+
 
   end
 
