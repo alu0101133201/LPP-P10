@@ -142,6 +142,13 @@ RSpec.describe Lista do
        expect(@lista1.vacia).to eq(true)
     end
 
+    it "Prueba de que se puede insertar un elemento en la lista" do
+      
+      @lista1.insertar_cabeza(@nodo1)
+          
+      expect(@lista1.vacia).to eq(false)
+
+    end
 
 
   end
