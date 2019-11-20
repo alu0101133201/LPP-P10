@@ -15,6 +15,11 @@ class Lista
   def to_s
 
     string = "" 
+
+    if(@head == nil)
+      return string
+    end
+
     x = @head
 
     while x.next != nil
@@ -76,18 +81,18 @@ end
   end
 
 
-  def insertar_multi_head(array)
+  def insertar_multi_cabeza(array)
 
     array.reverse.each { |x| insertar_cabeza(x) }
 
 
   end
 
+  def insertar_multi_cola(array)
+  
+    array.each { |x| insertar_cola(x) }
 
-
-
-
-
+  end
 
 
 

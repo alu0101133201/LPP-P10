@@ -172,9 +172,9 @@ RSpec.describe Lista do
 
     it "Prueba de que sepueden insertar varios elementos en la lista" do
       
-      @lista1.insertar_multi_head([@nodo4,@nodo5,@nodo6])
+      @lista1.insertar_multi_cabeza([@nodo4,@nodo5,@nodo6])
       expect(@lista1.to_s).to eq("2,1,100,0,20,15")
-      @lista1.insertar_multi_tail([@nodo7,@nodo8])
+      @lista1.insertar_multi_cola([@nodo7,@nodo8])
       expect(@lista1.to_s).to eq("2,1,100,0,20,15,55,17")
 
 
