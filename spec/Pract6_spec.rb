@@ -122,6 +122,10 @@ RSpec.describe Lista do
  before (:all) do
   
     @lista1 = Lista.new
+    @lista2 = Lista.new
+
+    @nodo1 = Nodo.new(15,nil,nil)
+    @nodo2 = Nodo.new(20,nil,nil)
 
   end
 
@@ -133,6 +137,12 @@ RSpec.describe Lista do
       expect(@lista1.tail).to eq(nil)
 
     end
+  
+    it "Prueba de que la lista está vacía" do
+       expect(@lista1.vacia).to eq(true)
+    end
+
+
 
   end
 
