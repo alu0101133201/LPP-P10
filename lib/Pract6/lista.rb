@@ -12,5 +12,18 @@ class Lista
   end
 
 
+  def vacia
+  
+    if(@head == nil)
+      return true
+
+    else
+      return false
+    end
+
+  end
+
+
+
 
 end
