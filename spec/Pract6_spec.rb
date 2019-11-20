@@ -126,6 +126,12 @@ RSpec.describe Lista do
 
     @nodo1 = Nodo.new(15,nil,nil)
     @nodo2 = Nodo.new(20,nil,nil)
+    @nodo3 = Nodo.new(3,nil,nil)
+    @nodo4 = Nodo.new(0,nil,nil)
+    @nodo5 = Nodo.new(1,nil,nil)
+    @nodo6 = Nodo.new(100,nil,nil)
+
+    array_nodos = [@nodo3,@nodo4,@nodo5,@nodo6]
 
   end
 
@@ -157,10 +163,18 @@ RSpec.describe Lista do
       expect(@lista1.to_s).to eq("20,15")      
 
     end
-
-
   end
 
+  context "Pruebas de la clase lista" do
+
+    it "Prueba de que sepueden insertar varios elementos en la lista" do
+      
+      insertar_multi_head(array_nodos)
+      expect(@lista.to_s).to eq("3,0,1,100,20,15")
+
+    end
+
+  end
 end
 
 
