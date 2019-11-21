@@ -132,7 +132,7 @@ RSpec.describe Lista do
     @nodo6 = Nodo.new(100,nil,nil)
     @nodo7 = Nodo.new(55,nil,nil)
     @nodo8 = Nodo.new(17,nil,nil)
-
+    @nodo9 = Nodo.new(5555,nil,nil)
     @nodo10 = Nodo.new(50,nil,nil)
   end
 
@@ -181,13 +181,18 @@ RSpec.describe Lista do
 
     it "Prueba de que se puede extraer el primer elemento de la lista" do
 
-
       expect(@lista1.extraer_cabeza).to eq(@nodo4)
       expect(@lista1.to_s).to eq("1,100,0,20,15,55,17")
 
+    end
+  
+    it "Prueba de que se puede extraer el último elemento de la lista" do
+
+      expect(@lista1.extraer_cola).to eq(@nodo8)
+      expect(@lista1.to_s).to eq("1,100,0,20,15,55")
+
 
     end
-
 
   end
 end
