@@ -57,12 +57,18 @@ end
 def gei_diario(x,y)
 
   aux = x.head
+  gei = 0
+  count = 0
 
   while (aux != nil)
-
-    
-
+ 
+    gei += aux.value.g(y[count])
+ 
+    count = count+1 
+    aux = aux.next
+  
   end
+  return gei 
 end
 
 

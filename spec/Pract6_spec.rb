@@ -221,10 +221,10 @@ RSpec.describe Lista do
   
   context "Pruebas de las dietas" do
  
-    it "Prueba de la dieta española" do   
+    it "Prueba de emisiones diarias de gei" do   
 
     @l_e.insertar_multi_cabeza(@esp)
-#    expect(gei_diario(@l_e,[500,300,400])).to eq(3.86)
+    expect(gei_diario(@l_e,[500,300,400])).to eq(3.92)
 
    end
 
