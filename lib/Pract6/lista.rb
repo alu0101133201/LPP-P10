@@ -102,6 +102,7 @@ end
       
       @head = x.next
       x.next = nil
+      @head.prev = nil
      
      if(@tail == x)
         @tail = @head
@@ -114,6 +115,30 @@ end
     return @head
   
   end
+
+
+  def extraer_cola
+
+    if(@tail != nil)
+
+      x = @tail
+      
+      @tail = x.prev
+      x.prev = nil
+      @tail.next = nil
+
+      if(@head == nil)
+        @head = @tail
+      end
+
+    return x
+
+    end
+
+    return @tail
+
+  end
+
 end
 
 
