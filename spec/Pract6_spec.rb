@@ -177,9 +177,17 @@ RSpec.describe Lista do
       @lista1.insertar_multi_cola([@nodo7,@nodo8])
       expect(@lista1.to_s).to eq("2,1,100,0,20,15,55,17")
 
+    end
+
+    it "Prueba de que se puede extraer el primer elemento de la lista" do
+
+
+      expect(@lista1.extraer_cabeza).to eq(@nodo4)
+      expect(@lista1.to_s).to eq("1,100,0,20,15,55,17")
 
 
     end
+
 
   end
 end
