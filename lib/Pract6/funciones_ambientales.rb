@@ -68,7 +68,7 @@ def gei_diario(x,y)
     aux = aux.next
   
   end
-  return gei 
+  return gei.round(2) 
 end
 
 
@@ -80,7 +80,22 @@ def gei_anual(x,y)
 end
 
 
+def t_diario(x,y)
 
+  aux = x.head
+  t = 0
+  count = 0
+
+  while (aux != nil)
+ 
+    t += aux.value.t(y[count])
+ 
+    count = count+1 
+    aux = aux.next
+   end
+  
+  return t.round(2)
+end
 
 
 
