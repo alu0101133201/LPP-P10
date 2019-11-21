@@ -51,3 +51,40 @@ def impacto_ambiental_m(alimentos)
     return [gei.round(2),terreno.round(2)]
   end
 end 
+
+
+
+def gei_diario(x,y)
+
+  aux = x.head
+
+  while (aux != nil)
+
+    
+
+  end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
