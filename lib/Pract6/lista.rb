@@ -94,7 +94,43 @@ end
 
   end
 
-
-
+  def extraer_cabeza
   
+    if(@head != nil)
+
+      x = @head
+      
+      @head = x.next
+      x.next = nil
+     
+     if(@tail == x)
+        @tail = @head
+      end 
+
+ 
+      return x
+    end
+
+    return @head
+  
+  end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
