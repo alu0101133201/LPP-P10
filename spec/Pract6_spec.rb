@@ -231,12 +231,12 @@ RSpec.describe Lista do
     end
 
     it "Prueba de terreno usado a diario" do
-      
       expect(t_diario(@l_e,[500,300,400])).to eq(49.26)
-
-
     end
 
+    it "Prueba de terreno usado anual" do
+      expect(t_anual(@l_e,[500,300,400])).to eq(17979.9)
+    end
 
   end
 
