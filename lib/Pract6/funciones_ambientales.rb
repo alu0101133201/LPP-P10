@@ -76,7 +76,6 @@ end
 def gei_anual(x,y)
 
   return(gei_diario(x,y)*365)
-
 end
 
 
@@ -97,6 +96,10 @@ def t_diario(x,y)
   return t.round(2)
 end
 
+def t_anual(x,y)
+
+  return((t_diario(x,y)*365).round(2))
+end
 
 
 
