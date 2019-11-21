@@ -123,6 +123,7 @@ RSpec.describe Lista do
   
     @lista1 = Lista.new
     @lista2 = Lista.new
+    @l_e = Lista.new
 
     @nodo1 = Nodo.new(15,nil,nil)
     @nodo2 = Nodo.new(20,nil,nil)
@@ -134,6 +135,28 @@ RSpec.describe Lista do
     @nodo8 = Nodo.new(17,nil,nil)
     @nodo9 = Nodo.new(5555,nil,nil)
     @nodo10 = Nodo.new(50,nil,nil)
+
+
+
+    #@alimento1 = Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
+    #@alimento3 = Alimento.new("Cerdo", 21.5, 0.0, 6.3, 7.6, 11.0)
+    #@alimento4 = Alimento.new("Queso", 25.0, 1.3, 33.0, 11.0, 41.0)
+
+    #Dieta española
+
+    @alimento1 = Alimento.new("Lentejas", 23.5, 52.0, 1.4, 0.4, 3.4)
+    @alimento2 = Alimento.new("Cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
+    @alimento3 = Alimento.new("Nuez", 20.0, 21.0, 54.0, 0.3, 7.9)
+    
+    @nodo_lentejas = Nodo.new(@alimento1,nil,nil)
+    @nodo_cerveza = Nodo.new(@alimento2,nil,nil)
+    @nodo_nuez = Nodo.new(@alimento3,nil,nil)
+
+    @esp = [@nodo_lentejas,@nodo_cerveza,@nodo_nuez]
+
+
+
+
   end
 
   context "Pruebas básicas de la clase lista" do
@@ -193,8 +216,20 @@ RSpec.describe Lista do
 
 
     end
+  end
+  
+  context "Pruebas de las dietas" do
+ 
+    it "Prueba de la dieta española" do   
+
+    @l_e.insertar_multi_cabeza(@esp)
+    expect(gei_diario(@l_e,[500,300,400])).to eq(3.86)
+
+   end
 
   end
+
+
 end
 
 
