@@ -223,10 +223,17 @@ RSpec.describe Lista do
  
     it "Prueba de emisiones diarias de gei" do   
 
-    @l_e.insertar_multi_cabeza(@esp)
-    expect(gei_diario(@l_e,[500,300,400])).to eq(3.92)
+      @l_e.insertar_multi_cabeza(@esp)
+      expect(gei_diario(@l_e,[500,300,400])).to eq(3.92)
 
-   end
+    end
+
+    it "Prueba de emisiones anules de gei" do
+
+      expect(gei_anual(@l_e,[500,300,400])).to eq(1430.8)
+
+    end
+
 
   end
 
