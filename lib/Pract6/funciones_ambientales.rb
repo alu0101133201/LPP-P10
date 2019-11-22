@@ -75,7 +75,7 @@ end
 
 def gei_anual(x,y)
 
-  return(gei_diario(x,y)*365)
+  return((gei_diario(x,y)*365).round(2))
 end
 
 

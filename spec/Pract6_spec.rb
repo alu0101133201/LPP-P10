@@ -125,6 +125,12 @@ RSpec.describe Lista do
     @lista1 = Lista.new
     @lista2 = Lista.new
     @l_e = Lista.new
+    @l_v = Lista.new
+    @l_vegetariana = Lista.new
+    @l_vegetaliana = Lista.new
+    @l_c = Lista.new
+    
+
 
     @nodo1 = Nodo.new(15,nil,nil)
     @nodo2 = Nodo.new(20,nil,nil)
@@ -137,26 +143,74 @@ RSpec.describe Lista do
     @nodo9 = Nodo.new(5555,nil,nil)
     @nodo10 = Nodo.new(50,nil,nil)
 
+    #Alimentos
 
 
-    #@alimento1 = Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
-    #@alimento3 = Alimento.new("Cerdo", 21.5, 0.0, 6.3, 7.6, 11.0)
-    #@alimento4 = Alimento.new("Queso", 25.0, 1.3, 33.0, 11.0, 41.0)
+    @alim1 = Alimento.new("carne_de_vaca", 21.1, 0.0, 3.1, 50.0, 164.0)
+    @alim2 = Alimento.new("chocolate", 5.3, 47.0, 30.0, 2.3, 3.4)
+    @alim3 = Alimento.new("lentejas", 23.5, 52.0, 1.4, 0.4, 3.4)
+    @alim4 = Alimento.new("huevos", 13.0, 1.1, 11.0, 4.2, 5.7)
+    @alim5 = Alimento.new("cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
+    @alim6 = Alimento.new("leche_de_vaca", 3.3, 4.8, 3.2, 3.2, 8.9)
+    @alim7 = Alimento.new("café", 0.1, 0.0, 0.0, 0.4, 0.3)
+    @alim8 = Alimento.new("tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
+    @alim9 = Alimento.new("nuez", 20.0, 21.0, 54.0, 0.3, 7.9)
+    @alim10 = Alimento.new("carne_de_cordero", 18.9, 0.0, 17.0, 20, 185.0)
+    @alim11 = Alimento.new("queso", 25.0, 1.3, 33.0, 11.0, 41.0)
+    @alim12 = Alimento.new("pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
 
-    #Dieta española
 
-    @alimento1 = Alimento.new("Lentejas", 23.5, 52.0, 1.4, 0.4, 3.4)
-    @alimento2 = Alimento.new("Cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
-    @alimento3 = Alimento.new("Nuez", 20.0, 21.0, 54.0, 0.3, 7.9)
-    
-    @nodo_lentejas = Nodo.new(@alimento1,nil,nil)
-    @nodo_cerveza = Nodo.new(@alimento2,nil,nil)
-    @nodo_nuez = Nodo.new(@alimento3,nil,nil)
+
+
+
+    #española
+    @nodo_lentejas = Nodo.new(@alim3,nil,nil)
+    @nodo_cerveza = Nodo.new(@alim5,nil,nil)
+    @nodo_nuez = Nodo.new(@alim9,nil,nil)
 
     @esp = [@nodo_lentejas,@nodo_cerveza,@nodo_nuez]
 
+    #vasca
+
+    @nodo_carne_vaca = Nodo.new(@alim1,nil,nil)
+    @nodo_lentejas2 = Nodo.new(@alim3,nil,nil)
+    @nodo_chocolate = Nodo.new(@alim2,nil,nil)
+    @nodo_cerveza2 = Nodo.new(@alim5,nil,nil)
+    @nodo_cafe = Nodo.new(@alim7,nil,nil)
+
+    @vas = [ @nodo_carne_vaca, @nodo_lentejas2, @nodo_chocolate, @nodo_cerveza2, @nodo_cafe ]
+
+    #vegetariana
+
+    @nodo_huevos = Nodo.new(@alim4,nil,nil)
+    @nodo_cerveza3 = Nodo.new(@alim5,nil,nil)
+    @nodo_lentejas3 = Nodo.new(@alim3,nil,nil)
+    @nodo_nuez2 = Nodo.new(@alim9,nil,nil)
+    @nodo_tofu = Nodo.new(@alim8,nil,nil)
+
+    @vegetariana = [ @nodo_tofu, @nodo_huevos, @nodo_lentejas3, @nodo_nuez2, @nodo_cerveza3 ]
+
+    #vegetaliana
+
+    @nodo_cerveza4 = Nodo.new(@alim5,nil,nil)
+    @nodo_lentejas4 = Nodo.new(@alim3,nil,nil)
+    @nodo_nuez3 = Nodo.new(@alim9,nil,nil)
+    @nodo_tofu2= Nodo.new(@alim8,nil,nil)
+
+   @vegetaliana = [ @nodo_tofu2, @nodo_lentejas4, @nodo_nuez3, @nodo_cerveza4 ]
 
 
+    #Carne
+
+    @nodo_leche_de_vaca = Nodo.new(@alim6,nil,nil)
+    @nodo_cerveza5 = Nodo.new(@alim5,nil,nil)
+    @nodo_carne_de_cordero = Nodo.new(@alim10,nil,nil)
+    @nodo_queso = Nodo.new(@alim11,nil,nil)
+    @nodo_pollo = Nodo.new(@alim12,nil,nil)
+    @nodo_carne_vaca2 = Nodo.new(@alim1,nil,nil)
+    
+    @c = [ @nodo_carne_vaca2, @nodo_carne_de_cordero, @nodo_queso, @nodo_pollo, @nodo_cerveza5 ]
+    
 
   end
 
@@ -221,21 +275,44 @@ RSpec.describe Lista do
   
   context "Pruebas de las dietas" do
  
-    it "Prueba de emisiones diarias de gei" do   
+    
+    it "Prueba de emisiones diarias de gei" do  
+ 
       @l_e.insertar_multi_cabeza(@esp)
+      @l_v.insertar_multi_cabeza(@vas)
+      @l_vegetariana.insertar_multi_cabeza(@vegetariana)
+      @l_vegetaliana.insertar_multi_cabeza(@vegetaliana)
+      @l_c.insertar_multi_cabeza(@c) 
+     
       expect(gei_diario(@l_e,[500,300,400])).to eq(3.92)
+      expect(gei_diario(@l_v,[200,200,200,200,300])).to eq(107.08)
+      expect(gei_diario(@l_vegetariana,[300,100,100,100,100])).to eq(11.14)
+      expect(gei_diario(@l_vegetaliana,[400,100,100,100])).to eq(8.94)
+      expect(gei_diario(@l_c,[100,100,100,100,100])).to eq(86.94)
     end
 
     it "Prueba de emisiones anules de gei" do
       expect(gei_anual(@l_e,[500,300,400])).to eq(1430.8)
+      expect(gei_anual(@l_v,[200,200,200,200,300])).to eq(39084.2)
+      expect(gei_anual(@l_vegetariana,[300,100,100,100,100])).to eq(4066.1)
+      expect(gei_anual(@l_vegetaliana,[400,100,100,100])).to eq(3263.1)
+      expect(gei_anual(@l_c,[100,100,100,100,100])).to eq(31733.1)
     end
 
     it "Prueba de terreno usado a diario" do
       expect(t_diario(@l_e,[500,300,400])).to eq(49.26)
+      expect(t_diario(@l_v,[200,200,200,200,300])).to eq(342.94)
+      expect(t_diario(@l_vegetariana,[300,100,100,100,100])).to eq(23.82)
+      expect(t_diario(@l_vegetaliana,[400,100,100,100])).to eq(20.32)
+      expect(t_diario(@l_c,[100,100,100,100,100])).to eq(397.32)
     end
 
     it "Prueba de terreno usado anual" do
       expect(t_anual(@l_e,[500,300,400])).to eq(17979.9)
+      expect(t_anual(@l_v,[200,200,200,200,300])).to eq(125173.1)
+      expect(t_anual(@l_vegetariana,[300,100,100,100,100])).to eq(8694.3)
+      expect(t_anual(@l_vegetaliana,[400,100,100,100])).to eq(7416.8)
+      expect(t_anual(@l_c,[100,100,100,100,100])).to eq(145021.8)
     end
 
   end
