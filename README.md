@@ -1,4 +1,4 @@
-# Práctica 06
+# Práctica 07
 ------------------------------------------
 
 ## Nombre: 
@@ -33,7 +33,7 @@
 ├── lib
 │   ├── Pract6
 │   │   ├── nodo.rb
-│   │   ├── lista_d_e.rb
+│   │   ├── lista.rb
 │   │   ├── alimento.rb
 │   │   ├── funciones_ambientales.rb
 │   │   └── version.rb
