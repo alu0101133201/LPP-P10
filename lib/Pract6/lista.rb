@@ -2,6 +2,8 @@
 
 class Lista
 
+  include Enumerable
+
   attr_reader :head, :tail
 
   def initialize
@@ -139,6 +141,26 @@ end
     return @tail
 
   end
+
+
+
+  def each
+
+    x = @head
+    while (x != nil)
+  
+      yield x.value
+      x = x.next
+
+    end
+
+  end
+
+
+
+
+
+
 
 end
 

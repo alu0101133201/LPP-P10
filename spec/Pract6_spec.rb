@@ -311,11 +311,11 @@ RSpec.describe Alimento do
 
     it "Prueba de que la lista doblemente enlazada sea enumerable" do
 
-      expect(@lista.collect { |i| i > @alimento5 }).to eq ([@alimento3,@alimento4])
+      expect(@lista.collect {|i| i.proteinas*2.0 }).to eq([16.0,1.0,43.0,50.0])
       expect(@lista.select { |i| i.proteinas == 0.5 }).to eq ([@alimento2])
       expect(@lista.max).to eq(@alimento4)
       expect(@lista.min).to eq(@alimento2)
-      expect(@lista.sort).to eq([@alimento4,@alimento3,@alimento1,@alimento2])
+      expect(@lista.sort).to eq([@alimento2,@alimento1,@alimento3,@alimento4])
 
     end
 
