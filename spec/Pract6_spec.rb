@@ -279,5 +279,50 @@ RSpec.describe Lista do
 end
 
 
+RSpec.describe Alimento do
+
+  before (:all) do
+
+    @alimento1 = Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
+    @alimento2 = Alimento.new("Cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
+    @alimento3 = Alimento.new("Cerdo", 21.5, 0.0, 6.3, 7.6, 11.0)
+    @alimento4 = Alimento.new("Queso", 25.0, 1.3, 33.0, 11.0, 41.0)
+  end 
+
+  context "Pruebas de módulos" do
+
+    it "Prueba de que los alimentos son comparables" do 
+
+      expect(@alimento1 > @alimento2).to eq(true)
+      expect(@alimento1 < @alimento2).to eq(false)
+      expect(@alimento1 >= @alimento2).to eq(true)
+      expect(@alimento1 <= @alimento1).to eq(false)
+      expect(@alimento1 == @alimento1).to eq(true)
+      expect(@alimento1.between?(80,90)).to eq(true)
+      expect(@alimento1.clamp(10,30)).to eq(30)
+     
+    
+    end
+  end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
