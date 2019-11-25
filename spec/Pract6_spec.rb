@@ -287,6 +287,12 @@ RSpec.describe Alimento do
     @alimento2 = Alimento.new("Cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
     @alimento3 = Alimento.new("Cerdo", 21.5, 0.0, 6.3, 7.6, 11.0)
     @alimento4 = Alimento.new("Queso", 25.0, 1.3, 33.0, 11.0, 41.0)
+    @alimento5 = Alimento.new("pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
+
+    @lista = Lista.new
+    @lista.insertar_multi_cabeza([@alimento1,@alimento2,@alimento3,@alimento4])
+
+
   end 
 
   context "Pruebas de módulos" do
@@ -300,10 +306,21 @@ RSpec.describe Alimento do
       expect(@alimento1 == @alimento1).to eq(true)
       expect(@alimento1.between?(@alimento2,@alimento4)).to eq(true)
       expect(@alimento2.clamp(@alimento1,@alimento4)).to eq(@alimento1)
-     
-    
+   
     end
+
+    it "Prueba de que la lista doblemente enlazada sea enumerable" do
+
+      expect(@lista.collect { |i| i > @alimento5 }).to eq ([@alimento3,@alimento4])
+      expect(@lista.select { |i| i.proteinas == 0.5 }).to eq ([@alimento2])
+      expect(@lista.max).to eq(@alimento4)
+      expect(@lista.min).to eq(@alimento2)
+      expect(@lista.sort).to eq([@alimento4,@alimento3,@alimento1,@alimento2])
+
+    end
+
   end
+
 end
 
 
