@@ -48,33 +48,34 @@ class Lista
 
   def insertar_cabeza(x)
 
-    raise TypeError, "Se espera un nodo como argumento" unless x.is_a?Nodo
+   nodo = Nodo.new(x,nil,nil) 
 
-     if(@head == nil)
-        @head = x
-        @tail = x
+    if(@head == nil)
+        @head = nodo 
+        @tail = nodo
     
     else 
-      @head.prev = x
-      x.next = @head
-      @head = x
+      @head.prev = nodo
+      nodo.next = @head
+      @head = nodo
 
   end
 end
   
   def insertar_cola(x)
 
-    raise TypeError, "Se espera un nodo como argumento" unless x.is_a?Nodo
 
-     if(@head == nil)
-        @head = x
-        @tail = x
+   nodo = Nodo.new(x,nil,nil) 
+   
+    if(@head == nil)
+        @head = nodo
+        @tail = nodo
 
      else
         
-      @tail.next = x
-      x.prev = @tail
-      @tail = x  
+      @tail.next = nodo
+      nodo.prev = @tail
+      @tail = nodo  
 
     end
 
@@ -109,7 +110,7 @@ end
       end 
 
  
-      return x
+      return x.value
     end
 
     return @head
@@ -131,7 +132,7 @@ end
         @head = @tail
       end
 
-    return x
+    return x.value
 
     end
 

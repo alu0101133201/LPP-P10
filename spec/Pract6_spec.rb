@@ -25,7 +25,6 @@ RSpec.describe Pract6 do
 
   end
 
-
   context "Probando los getters y el to_s" do       
 
     it "Instanciación correcta del objeto alimento" do
@@ -46,6 +45,7 @@ RSpec.describe Pract6 do
       expect(@alimento1.lip(200)).to eq(9.6)      
       expect(@alimento1.g(200)).to eq(4.0)      
       expect(@alimento1.t(200)).to eq(4.4)      
+
 
 
     end
@@ -131,20 +131,7 @@ RSpec.describe Lista do
     @l_c = Lista.new
     
 
-
-    @nodo1 = Nodo.new(15,nil,nil)
-    @nodo2 = Nodo.new(20,nil,nil)
-    @nodo3 = Nodo.new(0,nil,nil)
-    @nodo4 = Nodo.new(2,nil,nil)
-    @nodo5 = Nodo.new(1,nil,nil)
-    @nodo6 = Nodo.new(100,nil,nil)
-    @nodo7 = Nodo.new(55,nil,nil)
-    @nodo8 = Nodo.new(17,nil,nil)
-    @nodo9 = Nodo.new(5555,nil,nil)
-    @nodo10 = Nodo.new(50,nil,nil)
-
     #Alimentos
-
 
     @alim1 = Alimento.new("carne_de_vaca", 21.1, 0.0, 3.1, 50.0, 164.0)
     @alim2 = Alimento.new("chocolate", 5.3, 47.0, 30.0, 2.3, 3.4)
@@ -160,56 +147,27 @@ RSpec.describe Lista do
     @alim12 = Alimento.new("pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
 
 
-
-
-
     #española
-    @nodo_lentejas = Nodo.new(@alim3,nil,nil)
-    @nodo_cerveza = Nodo.new(@alim5,nil,nil)
-    @nodo_nuez = Nodo.new(@alim9,nil,nil)
 
-    @esp = [@nodo_lentejas,@nodo_cerveza,@nodo_nuez]
+    @esp = [ @alim3,@alim5,@alim9 ]
 
     #vasca
 
-    @nodo_carne_vaca = Nodo.new(@alim1,nil,nil)
-    @nodo_lentejas2 = Nodo.new(@alim3,nil,nil)
-    @nodo_chocolate = Nodo.new(@alim2,nil,nil)
-    @nodo_cerveza2 = Nodo.new(@alim5,nil,nil)
-    @nodo_cafe = Nodo.new(@alim7,nil,nil)
-
-    @vas = [ @nodo_carne_vaca, @nodo_lentejas2, @nodo_chocolate, @nodo_cerveza2, @nodo_cafe ]
+    @vas = [ @alim1,@alim3,@alim2,@alim5,@alim7 ]
 
     #vegetariana
 
-    @nodo_huevos = Nodo.new(@alim4,nil,nil)
-    @nodo_cerveza3 = Nodo.new(@alim5,nil,nil)
-    @nodo_lentejas3 = Nodo.new(@alim3,nil,nil)
-    @nodo_nuez2 = Nodo.new(@alim9,nil,nil)
-    @nodo_tofu = Nodo.new(@alim8,nil,nil)
-
-    @vegetariana = [ @nodo_tofu, @nodo_huevos, @nodo_lentejas3, @nodo_nuez2, @nodo_cerveza3 ]
+    @vegetariana = [ @alim8,@alim4,@alim3,@alim9,@alim5 ]
 
     #vegetaliana
 
-    @nodo_cerveza4 = Nodo.new(@alim5,nil,nil)
-    @nodo_lentejas4 = Nodo.new(@alim3,nil,nil)
-    @nodo_nuez3 = Nodo.new(@alim9,nil,nil)
-    @nodo_tofu2= Nodo.new(@alim8,nil,nil)
 
-   @vegetaliana = [ @nodo_tofu2, @nodo_lentejas4, @nodo_nuez3, @nodo_cerveza4 ]
+    @vegetaliana = [ @alim8,@alim3,@alim9,@alim5 ]
 
 
     #Carne
-
-    @nodo_leche_de_vaca = Nodo.new(@alim6,nil,nil)
-    @nodo_cerveza5 = Nodo.new(@alim5,nil,nil)
-    @nodo_carne_de_cordero = Nodo.new(@alim10,nil,nil)
-    @nodo_queso = Nodo.new(@alim11,nil,nil)
-    @nodo_pollo = Nodo.new(@alim12,nil,nil)
-    @nodo_carne_vaca2 = Nodo.new(@alim1,nil,nil)
     
-    @c = [ @nodo_carne_vaca2, @nodo_carne_de_cordero, @nodo_queso, @nodo_pollo, @nodo_cerveza5 ]
+    @c = [ @alim1,@alim10,@alim11,@alim12,@alim5 ]
     
 
   end
@@ -229,9 +187,9 @@ RSpec.describe Lista do
 
     it "Prueba de que se puede insertar un elemento en la lista" do
       
-      @lista1.insertar_cabeza(@nodo1)
+      @lista1.insertar_cabeza(15)
     
-      @lista2.insertar_cola(@nodo10)
+      @lista2.insertar_cola(50)
           
       expect(@lista1.vacia).to eq(false)
       expect(@lista2.vacia).to eq(false)
@@ -239,8 +197,8 @@ RSpec.describe Lista do
 
     it "Prueba de que el to_s funciona" do
 
-      @lista1.insertar_cabeza(@nodo2)
-      @lista1.insertar_cabeza(@nodo3)
+      @lista1.insertar_cabeza(20)
+      @lista1.insertar_cabeza(0)
       expect(@lista1.to_s).to eq("0,20,15")      
 
     end
@@ -250,23 +208,23 @@ RSpec.describe Lista do
 
     it "Prueba de que sepueden insertar varios elementos en la lista" do
       
-      @lista1.insertar_multi_cabeza([@nodo4,@nodo5,@nodo6])
+      @lista1.insertar_multi_cabeza([2,1,100])
       expect(@lista1.to_s).to eq("2,1,100,0,20,15")
-      @lista1.insertar_multi_cola([@nodo7,@nodo8])
+      @lista1.insertar_multi_cola([55,17])
       expect(@lista1.to_s).to eq("2,1,100,0,20,15,55,17")
 
     end
 
     it "Prueba de que se puede extraer el primer elemento de la lista" do
 
-      expect(@lista1.extraer_cabeza).to eq(@nodo4)
+      expect(@lista1.extraer_cabeza).to eq(2)
       expect(@lista1.to_s).to eq("1,100,0,20,15,55,17")
 
     end
   
     it "Prueba de que se puede extraer el último elemento de la lista" do
 
-      expect(@lista1.extraer_cola).to eq(@nodo8)
+      expect(@lista1.extraer_cola).to eq(17)
       expect(@lista1.to_s).to eq("1,100,0,20,15,55")
 
 
