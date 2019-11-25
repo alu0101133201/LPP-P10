@@ -291,15 +291,15 @@ RSpec.describe Alimento do
 
   context "Pruebas de módulos" do
 
-    it "Prueba de que los alimentos son comparables" do 
+    it "Prueba de que los alimentos son comparables (a nivel energético)" do 
 
       expect(@alimento1 > @alimento2).to eq(true)
       expect(@alimento1 < @alimento2).to eq(false)
       expect(@alimento1 >= @alimento2).to eq(true)
-      expect(@alimento1 <= @alimento1).to eq(false)
+      expect(@alimento1 <= @alimento1).to eq(true)
       expect(@alimento1 == @alimento1).to eq(true)
-      expect(@alimento1.between?(80,90)).to eq(true)
-      expect(@alimento1.clamp(10,30)).to eq(30)
+      expect(@alimento1.between?(@alimento2,@alimento4)).to eq(true)
+      expect(@alimento2.clamp(@alimento1,@alimento4)).to eq(@alimento1)
      
     
     end

@@ -3,6 +3,9 @@
 
 class Alimento
 
+  include Comparable
+
+
   attr_reader :nombre, :proteinas, :carbohidratos, :lipidos, :gei, :terreno
 
   def initialize (n,p,c,l,g,t)
@@ -59,6 +62,27 @@ class Alimento
     end
  
   end
+
+
+
+  def <=>(other)
+    energia(100) <=> other.energia(100)
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 end
 
