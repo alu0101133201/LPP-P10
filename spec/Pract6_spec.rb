@@ -318,9 +318,49 @@ RSpec.describe Alimento do
       expect(@lista.sort).to eq([@alimento2,@alimento1,@alimento3,@alimento4])
 
     end
+  end
+end
+
+RSpec.describe Plato do
+
+  before (:all) do
+
+    @alim1 = Alimento.new("carne_de_vaca", 21.1, 0.0, 3.1, 50.0, 164.0)
+    @alim2 = Alimento.new("chocolate", 5.3, 47.0, 30.0, 2.3, 3.4)
+    @alim3 = Alimento.new("lentejas", 23.5, 52.0, 1.4, 0.4, 3.4)
+    @alim4 = Alimento.new("huevos", 13.0, 1.1, 11.0, 4.2, 5.7)
+    @alim5 = Alimento.new("cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
+    @alim6 = Alimento.new("leche_de_vaca", 3.3, 4.8, 3.2, 3.2, 8.9)
+    @alim7 = Alimento.new("café", 0.1, 0.0, 0.0, 0.4, 0.3)
+    @alim8 = Alimento.new("tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
+    @alim9 = Alimento.new("nuez", 20.0, 21.0, 54.0, 0.3, 7.9)
+    @alim10 = Alimento.new("carne_de_cordero", 18.9, 0.0, 17.0, 20, 185.0)
+    @alim11 = Alimento.new("queso", 25.0, 1.3, 33.0, 11.0, 41.0)
+    @alim12 = Alimento.new("pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
+
+    @c = [ @alim1,@alim10,@alim11,@alim12,@alim5 ]
+    @c_c = [50,50,50,50,50]
+
+    @lista = Lista.new
+    @listac_c = Lista.new
+    @listac.insertar_multi_cabeza(@c)
+    @listac_c.insertar_multi_cabeza(@c_c)
+
+    @plato = Plato.new("Plato de carne",@listac,@listac_c)
 
   end
 
+  context "Pruebas relativas a la clase plato" do
+
+    it "Prueba de que los obj. plato se instancian correctamente (obtención de atributos de manera correcta)" do
+      expect(@plato.nombre).to eq("Plato de carne")
+      expect(@plato.alimentos).not_to eq(nil)
+      expect(@plato.alimentos.to_s).to eq("carne_de_vaca,carne_de_cordero,queso,pollo,cerveza")
+      expect(@plato.cantidades).not_to eq(nil)
+      expect(@plato.cantidades.to_s).to eq("50,50,50,50,50") 
+    end
+
+  end
 end
 
 
