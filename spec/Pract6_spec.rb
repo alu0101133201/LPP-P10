@@ -338,13 +338,10 @@ RSpec.describe Plato do
     @alim11 = Alimento.new("queso", 25.0, 1.3, 33.0, 11.0, 41.0)
     @alim12 = Alimento.new("pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
 
-    @c = [ @alim1,@alim10,@alim11,@alim12,@alim5 ]
-    @c_c = [50,50,50,50,50]
-
-    @lista = Lista.new
+    @listac = Lista.new
     @listac_c = Lista.new
-    @listac.insertar_multi_cabeza(@c)
-    @listac_c.insertar_multi_cabeza(@c_c)
+    @listac.insertar_multi_cabeza( [ @alim1,@alim10,@alim11,@alim12,@alim5 ])
+    @listac_c.insertar_multi_cabeza([50,50,50,50,50])
 
     @plato = Plato.new("Plato de carne",@listac,@listac_c)
 
@@ -355,7 +352,7 @@ RSpec.describe Plato do
     it "Prueba de que los obj. plato se instancian correctamente (obtención de atributos de manera correcta)" do
       expect(@plato.nombre).to eq("Plato de carne")
       expect(@plato.alimentos).not_to eq(nil)
-      expect(@plato.alimentos.to_s).to eq("carne_de_vaca,carne_de_cordero,queso,pollo,cerveza")
+      expect(@plato.alimentos.to_s).to eq("(carne_de_vaca, 21.1, 0.0, 3.1, 50.0, 164.0),(carne_de_cordero, 18.9, 0.0, 17.0, 20, 185.0),(queso, 25.0, 1.3, 33.0, 11.0, 41.0),(pollo, 20.6, 0.0, 5.6, 5.7, 7.1),(cerveza, 0.5, 3.6, 0.0, 0.24, 0.22)")
       expect(@plato.cantidades).not_to eq(nil)
       expect(@plato.cantidades.to_s).to eq("50,50,50,50,50") 
     end
