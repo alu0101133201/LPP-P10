@@ -1,4 +1,4 @@
-#Clase que definirá la clase plato
+#lase que definirá la clase plato
 
 class Plato
 
@@ -38,7 +38,6 @@ class Plato
   def <=>(other)
        vct <=> other.vct 
   end
-
 
   def porcentaje_prot
 
