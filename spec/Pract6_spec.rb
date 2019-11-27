@@ -435,10 +435,18 @@ RSpec.describe Plato2 do
   
        expect(@plato.instance_of?Object).to eq (false)
        expect(@plato.instance_of?Plato2).to eq (true)
-      
-      
 
     end  
+
+    it "Prueba para comprobar la jerarquía del objeto" do
+  
+       expect(@plato.is_a?Object).to eq (true)
+       expect(@plato.is_a?Plato).to eq (true)
+       expect(@plato.is_a?BasicObject).to eq (true)
+       expect(@plato.is_a?Alimento).to eq (false)
+
+    end  
+
 
   end
 
