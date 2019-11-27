@@ -37,6 +37,7 @@
 │   │   ├── alimento.rb
 │   │   ├── funciones_ambientales.rb
 │   │   ├── version.rb
+│   │   ├── plato2.rb
 │   │   └── plato.rb
 │   └── Pract6.rb
 ├── Pract6.gemspec

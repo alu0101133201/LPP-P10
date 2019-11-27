@@ -412,7 +412,7 @@ RSpec.describe Plato2 do
 
     it "Prueba de obtención de las emisiones diarias de gei" do
 
-      expect(@plato.gei).to eq(21.76)
+      expect(@plato.gei).to eq(17.39)
 
     end
 
