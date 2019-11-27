@@ -411,9 +411,11 @@ RSpec.describe Plato2 do
   context "Pruebas básicas de la clase plato2" do
 
     it "Prueba de obtención de las emisiones diarias de gei" do
-
       expect(@plato.gei).to eq(17.39)
+    end
 
+    it "Prueba de obtención de terreno usado" do
+      expect(@plato.terreno).to eq(79.46)
     end
 
   end
