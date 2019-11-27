@@ -556,8 +556,15 @@ RSpec.describe Plato do
       end
 
       it "Pruebas energéticas" do
+        expect(@plato1.vct == @plato4.vct).to eq(false)
+        expect(@plato2.vct > @plato3.vct).to eq(true)
+        expect(@plato3.vct <= @plato2.vct).to eq(true)
+        expect(@plato4.vct == @plato5.vct).to eq(false)
+        expect(@plato5.vct > @plato1.vct).to eq(true)
+        expect(@plato1.vct < @plato2.vct).to eq(true)
+        expect(@plato2.vct > @plato2.vct).to eq(false)
     
-     end
+      end
 
 
 
