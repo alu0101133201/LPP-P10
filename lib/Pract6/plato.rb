@@ -69,4 +69,34 @@ class Plato
 
   end
 
+
+  def vct
+
+    gramos_totales = @cantidades.sum
+
+    p_p = porcentaje_prot
+    p_h = porcentaje_hid
+    p_l = porcentaje_lip
+
+    g_p = (gramos_totales*p_p)/100
+    g_h = (gramos_totales*p_h)/100
+    g_l = (gramos_totales*p_l)/100
+ 
+    energia_total = g_p*4 + g_h*4 + g_l*9    
+    return energia_total.round(2)
+ 
+
+  end
+
+
+
+
+
+
+
+
+
+
+
+
 end
