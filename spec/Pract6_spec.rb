@@ -339,22 +339,38 @@ RSpec.describe Plato do
     @alim12 = Alimento.new("pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
 
     @listac = Lista.new
+    @listae = Lista.new
+    @listav = Lista.new
+
+    @listav_c = Lista.new
+    @listae_c = Lista.new
     @listac_c = Lista.new
+
     @listac.insertar_multi_cabeza( [ @alim1,@alim10,@alim11,@alim12,@alim5 ])
+    @listae.insertar_multi_cabeza( [ @alim3,@alim5,@alim9 ])
+    @listav.insertar_multi_cabeza( [ @alim1,@alim3,@alim2,@alim5,@alim7 ])
+
+    @listav_c.insertar_multi_cabeza([50,50,50,50,100])
+    @listae_c.insertar_multi_cabeza([100,50,150])
     @listac_c.insertar_multi_cabeza([50,50,50,50,50])
 
-    @plato = Plato.new("Plato de carne",@listac,@listac_c)
+    @plato =  Plato.new("Plato de carne",@listac,@listac_c)
+    @plato2 = Plato.new("Plato español",@listae,@listae_c)
+    @plato3 = Plato.new("Plato vasco",@listav,@listav_c)
+    
 
   end
 
   context "Pruebas relativas a la clase plato" do
 
     it "Prueba de que los obj. plato se instancian correctamente (obtención de atributos de manera correcta)" do
+
       expect(@plato.nombre).to eq("Plato de carne")
       expect(@plato.alimentos).not_to eq(nil)
       expect(@plato.alimentos.to_s).to eq("(carne_de_vaca, 21.1, 0.0, 3.1, 50.0, 164.0),(carne_de_cordero, 18.9, 0.0, 17.0, 20, 185.0),(queso, 25.0, 1.3, 33.0, 11.0, 41.0),(pollo, 20.6, 0.0, 5.6, 5.7, 7.1),(cerveza, 0.5, 3.6, 0.0, 0.24, 0.22)")
       expect(@plato.cantidades).not_to eq(nil)
       expect(@plato.cantidades.to_s).to eq("50,50,50,50,50") 
+
     end
 
     it "Prueba de los métodos que obtienen el tanto por ciento de los valores nutricionales de un plato" do
@@ -368,6 +384,8 @@ RSpec.describe Plato do
     it "Prueba de obtención del valor calórico total de un plato" do
 
       expect(@plato.vct).to eq(446.15)
+      expect(@plato2.vct).to eq(971.16)
+      expect(@plato3.vct).to eq(443.04)
 
     end
 
@@ -376,8 +394,22 @@ RSpec.describe Plato do
       expect(@plato.to_s).to eq("[carne_de_vaca,50] [carne_de_cordero,50] [queso,50] [pollo,50] [cerveza,50] ")
 
     end
-
   end
+
+   context "Prueba de que las instancias son comparables" do
+
+      expect(@plato > @plato2).to eq(true)
+      expect(@plato < @plato2).to eq(false)
+      expect(@plato <= @plato2).to eq(true)
+      expect(@plato >= @plato2).to eq(false)
+      expect(@plato == @plato2).to eq(true)
+      expect(@plato.between?(@plato2,@plato3)).to eq(true)
+      expect(@plato2.clamp(@plato,@plato3)).to eq(@plato2)
+
+
+   end
+
+
 end
 
 
