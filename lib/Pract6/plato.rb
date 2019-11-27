@@ -34,16 +34,6 @@ class Plato
     return cadena
   end
 
-
-
-
-
-
-
-
-
-
-
   def porcentaje_prot
 
     gramos_totales = @cantidades.sum
