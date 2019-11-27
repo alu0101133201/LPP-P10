@@ -362,10 +362,14 @@ RSpec.describe Plato do
       expect(@plato.porcentaje_prot).to eq(17.22)
       expect(@plato.porcentaje_lip).to eq(11.74)
       expect(@plato.porcentaje_hid).to eq(0.98)
-       
 
     end
 
+    it "Prueba de obtención del valor calórico total de un plato" do
+
+      expect(@plato.vct).to eq(446.15)
+
+    end
 
   end
 end
