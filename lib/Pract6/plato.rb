@@ -2,8 +2,9 @@
 
 class Plato
 
+  include Comparable  
   
-    attr_accessor :nombre,:alimentos,:cantidades 
+  attr_accessor :nombre,:alimentos,:cantidades 
 
   def initialize(nombre,alimentos,cantidades)
 
@@ -33,6 +34,11 @@ class Plato
     end
     return cadena
   end
+
+  def <=>(other)
+       vct <=> other.vct 
+  end
+
 
   def porcentaje_prot
 

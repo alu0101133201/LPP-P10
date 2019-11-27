@@ -396,17 +396,19 @@ RSpec.describe Plato do
     end
   end
 
-   context "Prueba de que las instancias son comparables" do
+   context "Pruebas de módulos" do
 
-      expect(@plato > @plato2).to eq(true)
-      expect(@plato < @plato2).to eq(false)
+    it "Pruebas de que las instancias son comparables" do
+      expect(@plato > @plato2).to eq(false)
+      expect(@plato < @plato2).to eq(true)
       expect(@plato <= @plato2).to eq(true)
       expect(@plato >= @plato2).to eq(false)
-      expect(@plato == @plato2).to eq(true)
-      expect(@plato.between?(@plato2,@plato3)).to eq(true)
-      expect(@plato2.clamp(@plato,@plato3)).to eq(@plato2)
+      expect(@plato == @plato2).to eq(false)
+      expect(@plato == @plato).to eq(true)
+      expect(@plato.between?(@plato2,@plato3)).to eq(false)
+      expect(@plato2.clamp(@plato3,@plato)).to eq(@plato)
 
-
+     end
    end
 
 
@@ -487,15 +489,77 @@ end
 
 
 
+RSpec.describe Plato do
+
+   before(:all) do
+
+    @alim1 = Alimento.new("carne_de_vaca", 21.1, 0.0, 3.1, 50.0, 164.0)
+    @alim2 = Alimento.new("chocolate", 5.3, 47.0, 30.0, 2.3, 3.4)
+    @alim3 = Alimento.new("lentejas", 23.5, 52.0, 1.4, 0.4, 3.4)
+    @alim4 = Alimento.new("huevos", 13.0, 1.1, 11.0, 4.2, 5.7)
+    @alim5 = Alimento.new("cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
+    @alim6 = Alimento.new("leche_de_vaca", 3.3, 4.8, 3.2, 3.2, 8.9)
+    @alim7 = Alimento.new("café", 0.1, 0.0, 0.0, 0.4, 0.3)
+    @alim8 = Alimento.new("tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
+    @alim9 = Alimento.new("nuez", 20.0, 21.0, 54.0, 0.3, 7.9)
+    @alim10 = Alimento.new("carne_de_cordero", 18.9, 0.0, 17.0, 20, 185.0)
+    @alim11 = Alimento.new("queso", 25.0, 1.3, 33.0, 11.0, 41.0)
+    @alim12 = Alimento.new("pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
+
+    @listac = Lista.new
+    @listae = Lista.new
+    @listav = Lista.new
+    @listavegr = Lista.new
+    @listavegl = Lista.new
+
+    @listav_c = Lista.new
+    @listae_c = Lista.new
+    @listac_c = Lista.new
+    @listavegr_c = Lista.new
+    @listavegl_c = Lista.new
+
+    @listac.insertar_multi_cabeza( [ @alim1,@alim10,@alim11,@alim12,@alim5 ])
+    @listae.insertar_multi_cabeza( [ @alim3,@alim5,@alim9 ])
+    @listav.insertar_multi_cabeza( [ @alim1,@alim3,@alim2,@alim5,@alim7 ])
+    @listavegr.insertar_multi_cabeza( [ @alim8,@alim4,@alim3,@alim9,@alim5 ])
+    @listavegl.insertar_multi_cabeza( [ @alim8,@alim3,@alim9,@alim5 ])
+
+    @listav_c.insertar_multi_cabeza([100,100,100,100,150])
+    @listae_c.insertar_multi_cabeza([250,150,200])
+    @listac_c.insertar_multi_cabeza([50,50,50,50,50])
+    @listavegr_c.insertar_multi_cabeza( [ 150,50,50,50,50 ])
+    @listavegl_c.insertar_multi_cabeza( [ 200,50,50,50 ])
+
+    @plato1 = Plato.new("Plato de carne",@listac,@listac_c)
+    @plato2 = Plato.new("Plato español",@listae,@listae_c)
+    @plato3 = Plato.new("Plato vasco",@listav,@listav_c)
+    @plato4 = Plato.new("Plato vegetariano",@listavegr,@listavegr_c)
+    @plato5 = Plato.new("Plato vegetaliano",@listavegl, @listavegl_c)
 
 
 
+   end
+
+   context "Batería de pruebas con platos de las 5 dietas" do
+
+      it "Pruebas nutricionales" do
+
+        expect(@plato1.porcentaje_prot < @plato5.porcentaje_prot).to eq(true)
+        expect(@plato1.porcentaje_hid <= @plato2.porcentaje_hid).to eq(true)
+        expect(@plato1.porcentaje_lip == @plato4.porcentaje_lip).to eq(false)
+        expect(@plato5.porcentaje_lip >= @plato3.porcentaje_lip).to eq(true)
+        expect(@plato2.porcentaje_prot < @plato5.porcentaje_prot).to eq(true)
+        expect(@plato3.porcentaje_hid <= @plato1.porcentaje_hid).to eq(false)
+        expect(@plato5.porcentaje_lip == @plato4.porcentaje_lip).to eq(false)
+        expect(@plato4.porcentaje_lip >= @plato4.porcentaje_lip).to eq(true)
+
+      end
+
+      it "Pruebas energéticas" do
+    
+     end
 
 
 
-
-
-
-
-
-
+   end
+end
