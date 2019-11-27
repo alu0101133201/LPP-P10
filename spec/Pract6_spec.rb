@@ -373,7 +373,7 @@ RSpec.describe Plato do
 
     it "Prueba del fromateo del plato (to_s)" do 
 
-      expect(@plato.to_s).to eq("[carne_de_vaca,50],[carne_de_cordero,50],[queso,50],[pollo.50],[cerveza,50]")
+      expect(@plato.to_s).to eq("[carne_de_vaca,50] [carne_de_cordero,50] [queso,50] [pollo,50] [cerveza,50] ")
 
     end
 

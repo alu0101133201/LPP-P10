@@ -13,6 +13,37 @@ class Plato
 
   end
 
+
+  def to_s
+
+    cadena = ""
+    x = @alimentos.head
+    y = @cantidades.head
+  
+    while (x != nil)
+
+      cadena << "["
+      cadena << "#{x.value.nombre}"
+      cadena << ","
+      cadena << "#{y.value}"
+      cadena << "] " 
+      y = y.next
+      x = x.next
+
+    end
+    return cadena
+  end
+
+
+
+
+
+
+
+
+
+
+
   def porcentaje_prot
 
     gramos_totales = @cantidades.sum
