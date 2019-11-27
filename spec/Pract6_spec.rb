@@ -357,6 +357,16 @@ RSpec.describe Plato do
       expect(@plato.cantidades.to_s).to eq("50,50,50,50,50") 
     end
 
+    it "Prueba de los métodos que obtienen el tanto por ciento de los valores nutricionales de un plato" do
+
+      expect(@plato.porcentaje_prot).to eq(16.92)
+      expect(@plato.porcentaje_lip).to eq(11.74)
+      expect(@plato.porcentaje_hid).to eq(0.98)
+       
+
+    end
+
+
   end
 end
 

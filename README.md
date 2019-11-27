@@ -1,4 +1,4 @@
-# Práctica 07
+# Práctica 08
 ------------------------------------------
 
 ## Nombre: 
@@ -36,7 +36,8 @@
 │   │   ├── lista.rb
 │   │   ├── alimento.rb
 │   │   ├── funciones_ambientales.rb
-│   │   └── version.rb
+│   │   ├── version.rb
+│   │   └── plato.rb
 │   └── Pract6.rb
 ├── Pract6.gemspec
 ├── Rakefile
