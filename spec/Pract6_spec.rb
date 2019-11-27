@@ -418,6 +418,10 @@ RSpec.describe Plato2 do
       expect(@plato.terreno).to eq(79.46)
     end
 
+    it "Prueba de obtención de eficiencia energética formateada" do
+      expect(@plato.to_s).to eq("Plato de la dieta 'locos por la carne'. gei: 17.39 Terreno: 79.46")
+    end
+
   end
 
 
