@@ -421,9 +421,19 @@ RSpec.describe Plato2 do
     it "Prueba de obtención de eficiencia energética formateada" do
       expect(@plato.to_s).to eq("Plato de la dieta 'locos por la carne'. gei: 17.39 Terreno: 79.46")
     end
+  end
+  
+  context "Pruebas para comprobar la clase del objeto y su jerarquía" do
+
+    it "Prueba para comprobar la clase del objeto" do
+      
+      expect(@plato.class).to eq(Plato2)
+
+    end
+
+  
 
   end
-
 
 end
 
