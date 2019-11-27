@@ -431,7 +431,14 @@ RSpec.describe Plato2 do
 
     end
 
+    it "Prueba para comprobar el tipo del objeto" do
   
+       expect(@plato.instance_of?Object).to eq (false)
+       expect(@plato.instance_of?Plato2).to eq (true)
+      
+      
+
+    end  
 
   end
 
