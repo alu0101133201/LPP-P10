@@ -4,6 +4,26 @@ class Plato2 < Plato
     super(x,y,z)
   end
 
+
+  def to_s
+
+    string = ""
+    
+    string << "Plato de la dieta '#{nombre}'. "
+
+    string << "gei: "
+    string << "#{gei} "
+    string << "Terreno: "
+    string << "#{terreno}"
+
+    return string
+
+  end
+
+
+
+
+
   def gei
 
     gramos_totales = cantidades.sum

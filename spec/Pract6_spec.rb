@@ -404,7 +404,7 @@ RSpec.describe Plato2 do
     @listac.insertar_multi_cabeza( [ @alim1,@alim10,@alim11,@alim12,@alim5 ])
     @listac_c.insertar_multi_cabeza([50,50,50,50,50])
 
-    @plato = Plato2.new("Plato de carne",@listac,@listac_c)
+    @plato = Plato2.new("locos por la carne",@listac,@listac_c)
 
     end
 
