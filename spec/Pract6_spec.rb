@@ -291,6 +291,7 @@ RSpec.describe Alimento do
       expect(@alimento1 == @alimento1).to eq(true)
       expect(@alimento1.between?(@alimento2,@alimento4)).to eq(true)
       expect(@alimento2.clamp(@alimento1,@alimento4)).to eq(@alimento1)
+
    
     end
 
@@ -622,5 +623,46 @@ RSpec.describe Lista do
         expect(@lista_plato.sort).to eq([@plato1,@plato3,@plato4,@plato5,@plato2])
       end
 
+  end
+end
+
+
+
+
+
+RSpec.describe Plato do
+
+  before (:all) do
+
+    @alim1 = Alimento.new("carne_de_vaca", 21.1, 0.0, 3.1, 50.0, 164.0)
+    @alim2 = Alimento.new("chocolate", 5.3, 47.0, 30.0, 2.3, 3.4)
+    @alim3 = Alimento.new("lentejas", 23.5, 52.0, 1.4, 0.4, 3.4)
+    @alim4 = Alimento.new("huevos", 13.0, 1.1, 11.0, 4.2, 5.7)
+    @alim5 = Alimento.new("cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
+    @alim6 = Alimento.new("leche_de_vaca", 3.3, 4.8, 3.2, 3.2, 8.9)
+    @alim7 = Alimento.new("café", 0.1, 0.0, 0.0, 0.4, 0.3)
+    @alim8 = Alimento.new("tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
+    @alim9 = Alimento.new("nuez", 20.0, 21.0, 54.0, 0.3, 7.9)
+    @alim10 = Alimento.new("carne_de_cordero", 18.9, 0.0, 17.0, 20, 185.0)
+    @alim11 = Alimento.new("queso", 25.0, 1.3, 33.0, 11.0, 41.0)
+    @alim12 = Alimento.new("pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
+
+    @listac = Lista.new
+    @listac_c = Lista.new
+
+    @listac.insertar_multi_cabeza( [ @alim1,@alim10,@alim11,@alim12,@alim5 ])
+    @listac_c.insertar_multi_cabeza([400,200,400,200,100])
+
+    @plato1 = Plato.new("Plato de carne",@listac,@listac_c)
+
+  end
+
+  context "Pruebas respecto a la modificación de la clase plato (práct 09)" do
+
+    it "Prueba de la obtención de la huella nutricional de un plato" do
+      
+      expect(@plato1.huella_nutricional).to eq(1.2)
+
+    end
   end
 end
