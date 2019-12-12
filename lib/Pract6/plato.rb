@@ -116,13 +116,4 @@ class Plato
 
 
 
-
-
-
-
-
-
-
-
-
 end

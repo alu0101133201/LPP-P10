@@ -20,10 +20,6 @@ class Plato2 < Plato
 
   end
 
-
-
-
-
   def gei
 
     gramos_totales = cantidades.sum
@@ -62,5 +58,44 @@ class Plato2 < Plato
     return (total.round(2))
 
   end
+
+
+  def huella_nutricional
+
+    i_energia = alimentos.zip(cantidades).collect do |alimento, cantidad| 
+
+      if(alimento.energia(cantidad) > 830)
+        3.0
+      elsif(alimento.energia(cantidad) < 670) 
+        1.0 
+      else 
+        2.0
+      end
+    end
+
+    i_g = alimentos.zip(cantidades).collect do|alimento, cantidad| 
+
+      if(alimento.g(cantidad) < 800) 
+        1.0 
+      elsif(alimento.g(cantidad) > 1200) 
+        3.0
+      else 
+        2.0
+      end
+
+    end
+
+    i_t_e = i_energia.sum
+    i_t_g = i_g.sum
+
+    return((i_t_e+i_t_g)/alimentos.count)
+
+   # return((i_t_e+i_t_g)/alimentos.count)
+
+
+  end
+
+
+
 
 end

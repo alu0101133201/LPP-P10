@@ -542,14 +542,14 @@ RSpec.describe Plato do
       end
 
       it "Pruebas energéticas" do
-        expect(@plato1.vct == @plato4.vct).to eq(false)
-        expect(@plato2.vct > @plato3.vct).to eq(true)
-        expect(@plato3.vct <= @plato2.vct).to eq(true)
-        expect(@plato4.vct == @plato5.vct).to eq(false)
-        expect(@plato5.vct > @plato1.vct).to eq(true)
-        expect(@plato1.vct < @plato2.vct).to eq(true)
-        expect(@plato2.vct > @plato2.vct).to eq(false)
-        expect(@plato4.vct > @plato3.vct).to eq(true)
+        expect(@plato1 == @plato4).to eq(false)
+        expect(@plato2 > @plato3).to eq(true)
+        expect(@plato3 <= @plato2).to eq(true)
+        expect(@plato4 == @plato5).to eq(false)
+        expect(@plato5 > @plato1).to eq(true)
+        expect(@plato1 < @plato2).to eq(true)
+        expect(@plato2 > @plato2).to eq(false)
+        expect(@plato4 > @plato3).to eq(true)
     
       end
 
@@ -653,7 +653,7 @@ RSpec.describe Plato do
     @listac.insertar_multi_cabeza( [ @alim1,@alim10,@alim11,@alim12,@alim5 ])
     @listac_c.insertar_multi_cabeza([400,200,400,200,100])
 
-    @plato1 = Plato.new("Plato de carne",@listac,@listac_c)
+    @plato1 = Plato2.new("Plato de carne",@listac,@listac_c)
 
   end
 
@@ -661,7 +661,7 @@ RSpec.describe Plato do
 
     it "Prueba de la obtención de la huella nutricional de un plato" do
       
-      expect(@plato1.huella_nutricional).to eq(1.2)
+      expect(@plato1.huella_nutricional).to eq(2.4)
 
     end
   end

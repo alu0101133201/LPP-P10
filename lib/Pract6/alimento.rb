@@ -75,14 +75,5 @@ class Alimento
 
 
 
-
-
-
-
-
-
-
-
-
 end
 
