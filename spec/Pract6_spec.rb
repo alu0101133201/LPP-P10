@@ -649,11 +649,18 @@ RSpec.describe Plato do
 
     @listac = Lista.new
     @listac_c = Lista.new
+    @listae = Lista.new
+    @listae_c = Lista.new
+
 
     @listac.insertar_multi_cabeza( [ @alim1,@alim10,@alim11,@alim12,@alim5 ])
     @listac_c.insertar_multi_cabeza([400,200,400,200,100])
 
+    @listae.insertar_multi_cabeza( [ @alim3,@alim5,@alim9 ])
+    @listae_c.insertar_multi_cabeza([1000,400,700])
+
     @plato1 = Plato2.new("Plato de carne",@listac,@listac_c)
+    @plato2 = Plato2.new("plato español",@listae,@listae_c)
 
   end
 
@@ -661,7 +668,8 @@ RSpec.describe Plato do
 
     it "Prueba de la obtención de la huella nutricional de un plato" do
       
-      expect(@plato1.huella_nutricional).to eq(2.4)
+      expect(@plato1.huella_nutricional).to eq(1.2)
+      expect(@plato2.huella_nutricional).to eq(1.67)
 
     end
   end

@@ -88,10 +88,7 @@ class Plato2 < Plato
     i_t_e = i_energia.sum
     i_t_g = i_g.sum
 
-    return((i_t_e+i_t_g)/alimentos.count)
-
-   # return((i_t_e+i_t_g)/alimentos.count)
-
+    return(((i_t_e+i_t_g)/(alimentos.count*2)).round(2))
 
   end
 
