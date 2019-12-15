@@ -1,3 +1,13 @@
+#= Pract6.rb
+#
+# Autor:: Sergio Guerra Arencibia
+#
+# == Descripción
+# Esta gema implementará diferentes utilidades y funcionalidades
+# útiles para nutricionistas y gente interesada en la relación entre nutrición y medio ambiente 
+
+
+
 require "Pract6/version"
 require "Pract6/alimento.rb"
 require "Pract6/funciones_ambientales.rb"

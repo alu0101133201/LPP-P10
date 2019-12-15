@@ -1,11 +1,16 @@
-#Definicióin de clase que implementa una lista doblemente enlazada
+# = Definición de clase que implementa una lista doblemente enlazada
+# Autor:: Sergio Guerra Arencibia
 
 class Lista
 
   include Enumerable
 
+  # == Atributos típicos de uno lista doblemente enlazada
+  # Cabeza y cola
   attr_reader :head, :tail
 
+  # === Método initialize
+  # Inicializa la lista con sus atributos apuntando a nulo (lista vacía)
   def initialize
   
     @head = nil
@@ -14,6 +19,8 @@ class Lista
   end
 
 
+  # === Método to_s 
+  # Convierte la lista a string  
   def to_s
 
     string = "" 
@@ -37,6 +44,8 @@ class Lista
 
   end
 
+  # === Método vacia 
+  # Método para saber si la lista está vacía o no. True vacía, false significa que contiene elementos  
   def vacia
   
     if(@head == nil)
@@ -48,6 +57,8 @@ class Lista
 
   end
 
+  # === Método insertar_cabeza
+  # Método para insertar un elemento por la cabeza en la lista  
   def insertar_cabeza(x)
 
    nodo = Nodo.new(x,nil,nil) 
@@ -64,6 +75,8 @@ class Lista
   end
 end
   
+  # === Método insertar_cola
+  # Método para insertar un elemento por la cola en la lista  
   def insertar_cola(x)
 
 
@@ -84,6 +97,8 @@ end
   end
 
 
+  # === Método insertar_multi_cabeza
+  # Método para insertar varios elementos por la cabeza en la lista  
   def insertar_multi_cabeza(array)
 
     array.reverse.each { |x| insertar_cabeza(x) }
@@ -91,12 +106,16 @@ end
 
   end
 
+  # === Método insertar_multi_cola
+  # Método para insertar varios elementos por la cabeza en la cola
   def insertar_multi_cola(array)
   
     array.each { |x| insertar_cola(x) }
 
   end
 
+  # === Método extraer_cabeza 
+  # Método para extraer un elemento por la cabeza en la cabeza
   def extraer_cabeza
   
     if(@head != nil)
@@ -120,6 +139,8 @@ end
   end
 
 
+  # === Método extraer_cola
+  # Método para extraer un elemento por la cabeza en la cola
   def extraer_cola
 
     if(@tail != nil)
@@ -143,7 +164,8 @@ end
   end
 
 
-
+ # === Método each
+ # Método para hacer la clase enumerable
   def each
 
     x = @head
