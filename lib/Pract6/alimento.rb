@@ -62,6 +62,8 @@ class Alimento
 
   end
 
+  # === Método energia 
+  # Devuelve la cantidad de alimento dada una cantidad del mismo  
   def energia(cantidad)
 
     (prot(cantidad)*4.0) + (ch(cantidad)*4.0) + (lip(cantidad)*9.0)

@@ -306,7 +306,7 @@
 
           
           <div class="method-source-code" id="3C-3D-3E-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 90</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 92</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
   <span class="ruby-identifier">energia</span>(<span class="ruby-value">100</span>) <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">energia</span>(<span class="ruby-value">100</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -368,13 +368,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-energia-label-M-C3-A9todo+energia+">Método energia <span><a href="#method-i-energia-label-M-C3-A9todo+energia+">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve la cantidad de alimento dada una cantidad del mismo</p>
           
           
 
           
           <div class="method-source-code" id="energia-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 65</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 67</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">energia</span>(<span class="ruby-identifier">cantidad</span>)
 
   (<span class="ruby-identifier">prot</span>(<span class="ruby-identifier">cantidad</span>)<span class="ruby-operator">*</span><span class="ruby-value">4.0</span>) <span class="ruby-operator">+</span> (<span class="ruby-identifier">ch</span>(<span class="ruby-identifier">cantidad</span>)<span class="ruby-operator">*</span><span class="ruby-value">4.0</span>) <span class="ruby-operator">+</span> (<span class="ruby-identifier">lip</span>(<span class="ruby-identifier">cantidad</span>)<span class="ruby-operator">*</span><span class="ruby-value">9.0</span>)
@@ -411,7 +413,7 @@
 
           
           <div class="method-source-code" id="energia_mayor-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 73</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 75</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">energia_mayor</span>(<span class="ruby-identifier">alimento</span>)
 
   <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-string">&quot;Se espera como argumento un alimento&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">alimento</span>.<span class="ruby-identifier">is_a?</span><span class="ruby-constant">Alimento</span>
