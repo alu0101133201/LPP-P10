@@ -92,7 +92,9 @@ class Plato2 < Plato
 
   end
 
+  def <=>(other) 
 
+    huella_nutricional <=> other.huella_nutricional
 
-
+  end
 end
