@@ -1,11 +1,16 @@
-#lase que definirá la clase plato
+#Clase que definirá la clase plato (padre)
 
 class Plato
 
   include Comparable  
   
+  # == Atributos de un plato 
+  # nombre, alimentos ycantidades
   attr_accessor :nombre,:alimentos,:cantidades 
 
+  # === Método initialize
+  # Inicializa el plato con sus parámetros correspondientes
+  # Parámetros: nombre, alimentos y cantidades
   def initialize(nombre,alimentos,cantidades)
 
     @nombre = nombre
@@ -15,6 +20,8 @@ class Plato
   end
 
 
+  # === Método to_s 
+  # Convierte la lista a string  
   def to_s
 
     cadena = ""
@@ -35,10 +42,14 @@ class Plato
     return cadena
   end
 
+  # === Método <=>
+  # Hace que los platos sean comparables en función a su vct
   def <=>(other)
        vct <=> other.vct 
   end
 
+  # === Método porcentaje_prot
+  # Devuelve el porcentaje de proteinas que tiene el plato 
   def porcentaje_prot
 
     gramos_totales = @cantidades.sum
@@ -57,6 +68,8 @@ class Plato
 
   end
 
+  # === Método porcentaje_lip
+  # Devuelve el porcentaje de lípidos que tiene el plato 
   def porcentaje_lip
 
     gramos_totales = @cantidades.sum
@@ -77,6 +90,8 @@ class Plato
 
 
 
+  # === Método porcentaje_hid
+  # Devuelve el porcentaje de carbohidratos que tiene el plato 
   def porcentaje_hid
 
     gramos_totales = @cantidades.sum
@@ -95,7 +110,8 @@ class Plato
 
   end
 
-
+  # === Método vct
+  # Devuelve la cantidad de vct del plato
   def vct
 
     gramos_totales = @cantidades.sum
