@@ -99,7 +99,7 @@
 
   <section class="description">
     
-<p>lase que definirá la clase plato</p>
+<p>Clase que definirá la clase plato (padre)</p>
 
   </section>
 
@@ -126,7 +126,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-alimentos-label-Atributos+de+un+plato+">Atributos de un plato <span><a href="#attribute-i-alimentos-label-Atributos+de+un+plato+">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>nombre, alimentos ycantidades</p>
         
         </div>
       </div>
@@ -139,7 +141,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-cantidades-label-Atributos+de+un+plato+">Atributos de un plato <span><a href="#attribute-i-cantidades-label-Atributos+de+un+plato+">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>nombre, alimentos ycantidades</p>
         
         </div>
       </div>
@@ -152,7 +156,9 @@
 
         <div class="method-description">
         
-        
+        <h2 id="attribute-i-nombre-label-Atributos+de+un+plato+">Atributos de un plato <span><a href="#attribute-i-nombre-label-Atributos+de+un+plato+">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>nombre, alimentos ycantidades</p>
         
         </div>
       </div>
@@ -180,13 +186,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-c-new-label-M-C3-A9todo+initialize">Método initialize<span><a href="#method-c-new-label-M-C3-A9todo+initialize">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Inicializa el plato con sus parámetros correspondientes Parámetros: nombre, alimentos y cantidades</p>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 9</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 14</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">nombre</span>,<span class="ruby-identifier">alimentos</span>,<span class="ruby-identifier">cantidades</span>)
 
   <span class="ruby-ivar">@nombre</span> = <span class="ruby-identifier">nombre</span>
@@ -225,13 +233,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-3C-3D-3E-label-M-C3-A9todo+-3C-3D-3E">Método &lt;=&gt;<span><a href="#method-i-3C-3D-3E-label-M-C3-A9todo+-3C-3D-3E">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Hace que los platos sean comparables en función a su vct</p>
           
           
 
           
           <div class="method-source-code" id="3C-3D-3E-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 38</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 47</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
      <span class="ruby-identifier">vct</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">vct</span> 
 <span class="ruby-keyword">end</span></pre>
@@ -258,13 +268,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-porcentaje_hid-label-M-C3-A9todo+porcentaje_hid">Método <a href="Plato.html#method-i-porcentaje_hid"><code>porcentaje_hid</code></a><span><a href="#method-i-porcentaje_hid-label-M-C3-A9todo+porcentaje_hid">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve el porcentaje de carbohidratos que tiene el plato</p>
           
           
 
           
           <div class="method-source-code" id="porcentaje_hid-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 80</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 95</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">porcentaje_hid</span>
 
   <span class="ruby-identifier">gramos_totales</span> = <span class="ruby-ivar">@cantidades</span>.<span class="ruby-identifier">sum</span>
@@ -305,13 +317,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-porcentaje_lip-label-M-C3-A9todo+porcentaje_lip">Método <a href="Plato.html#method-i-porcentaje_lip"><code>porcentaje_lip</code></a><span><a href="#method-i-porcentaje_lip-label-M-C3-A9todo+porcentaje_lip">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve el porcentaje de lípidos que tiene el plato</p>
           
           
 
           
           <div class="method-source-code" id="porcentaje_lip-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 60</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 73</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">porcentaje_lip</span>
 
   <span class="ruby-identifier">gramos_totales</span> = <span class="ruby-ivar">@cantidades</span>.<span class="ruby-identifier">sum</span>
@@ -351,13 +365,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-porcentaje_prot-label-M-C3-A9todo+porcentaje_prot">Método <a href="Plato.html#method-i-porcentaje_prot"><code>porcentaje_prot</code></a><span><a href="#method-i-porcentaje_prot-label-M-C3-A9todo+porcentaje_prot">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve el porcentaje de proteinas que tiene el plato</p>
           
           
 
           
           <div class="method-source-code" id="porcentaje_prot-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 42</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 53</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">porcentaje_prot</span>
 
   <span class="ruby-identifier">gramos_totales</span> = <span class="ruby-ivar">@cantidades</span>.<span class="ruby-identifier">sum</span>
@@ -398,13 +414,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-to_s-label-M-C3-A9todo+to_s+">Método <a href="Plato.html#method-i-to_s"><code>to_s</code></a> <span><a href="#method-i-to_s-label-M-C3-A9todo+to_s+">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Convierte la lista a string</p>
           
           
 
           
           <div class="method-source-code" id="to_s-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 18</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 25</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
 
   <span class="ruby-identifier">cadena</span> = <span class="ruby-string">&quot;&quot;</span>
@@ -447,13 +465,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-vct-label-M-C3-A9todo+vct">Método vct<span><a href="#method-i-vct-label-M-C3-A9todo+vct">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve la cantidad de vct del plato</p>
           
           
 
           
           <div class="method-source-code" id="vct-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 99</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/plato.rb, line 115</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">vct</span>
 
   <span class="ruby-identifier">gramos_totales</span> = <span class="ruby-ivar">@cantidades</span>.<span class="ruby-identifier">sum</span>

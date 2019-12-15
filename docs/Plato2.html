@@ -97,6 +97,8 @@
 
   <section class="description">
     
+<p>Clase que define el objeto plato 2. Es hijo de la clase plato</p>
+
   </section>
 
   
@@ -129,7 +131,10 @@
 
         <div class="method-description">
           
-          
+          <pre>=== Método initialize
+Inicializa la lista con sus atributos 3 atributos</pre>
+
+<p>Parámetros: nombre lista con los alimentos, lista con las cantidades</p>
           
           
             <div class="method-calls-super">
@@ -140,7 +145,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/plato2.rb, line 3</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/plato2.rb, line 11</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>,<span class="ruby-identifier">z</span>)
   <span class="ruby-keyword">super</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>,<span class="ruby-identifier">z</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -175,13 +180,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-3C-3D-3E-label-M-C3-A9todo+-3C-3D-3E">Método &lt;=&gt;<span><a href="#method-i-3C-3D-3E-label-M-C3-A9todo+-3C-3D-3E">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Redefine el método &lt;=&gt; para hacer comparable en base a la huella nutricional</p>
           
           
 
           
           <div class="method-source-code" id="3C-3D-3E-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/plato2.rb, line 95</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/plato2.rb, line 114</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>) 
 
   <span class="ruby-identifier">huella_nutricional</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">huella_nutricional</span>
@@ -210,13 +217,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-gei-label-M-C3-A9todo+gei+">Método gei <span><a href="#method-i-gei-label-M-C3-A9todo+gei+">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve los gases de efecto invernadero de un plato</p>
           
           
 
           
           <div class="method-source-code" id="gei-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/plato2.rb, line 23</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/plato2.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">gei</span>
 
   <span class="ruby-identifier">gramos_totales</span> = <span class="ruby-identifier">cantidades</span>.<span class="ruby-identifier">sum</span>
@@ -258,13 +267,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-huella_nutricional-label-M-C3-A9todo+huella_nutricional+">Método <a href="Plato2.html#method-i-huella_nutricional"><code>huella_nutricional</code></a> <span><a href="#method-i-huella_nutricional-label-M-C3-A9todo+huella_nutricional+">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve la huella nutricional de un plato</p>
           
           
 
           
           <div class="method-source-code" id="huella_nutricional-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/plato2.rb, line 63</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/plato2.rb, line 79</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">huella_nutricional</span>
 
   <span class="ruby-identifier">i_energia</span> = <span class="ruby-identifier">alimentos</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">cantidades</span>).<span class="ruby-identifier">collect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">alimento</span>, <span class="ruby-identifier">cantidad</span><span class="ruby-operator">|</span> 
@@ -319,13 +330,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-terreno-label-M-C3-A9todo+terreno+">Método terreno <span><a href="#method-i-terreno-label-M-C3-A9todo+terreno+">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Devuelve el terreno necesario para la elaboración de un plato</p>
           
           
 
           
           <div class="method-source-code" id="terreno-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/plato2.rb, line 43</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/plato2.rb, line 57</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">terreno</span>
 
   <span class="ruby-identifier">gramos_totales</span> = <span class="ruby-identifier">cantidades</span>.<span class="ruby-identifier">sum</span>
@@ -367,13 +380,15 @@
 
         <div class="method-description">
           
-          
+          <h3 id="method-i-to_s-label-M-C3-A9todo+to_s+">Método <a href="Plato2.html#method-i-to_s"><code>to_s</code></a> <span><a href="#method-i-to_s-label-M-C3-A9todo+to_s+">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Convierte la lista a string</p>
           
           
 
           
           <div class="method-source-code" id="to_s-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/plato2.rb, line 8</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/plato2.rb, line 18</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
 
   <span class="ruby-identifier">string</span> = <span class="ruby-string">&quot;&quot;</span>
