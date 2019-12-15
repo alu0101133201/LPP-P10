@@ -698,5 +698,11 @@ RSpec.describe Plato2 do
       expect(@menu_dietetico2.max).to eq(@plato3)
 
     end
+
+    it "Prueba para aumentar el precio de los platos en proporcion al del plato con mayor huella nutricional" do
+
+      expect(generar_precio(@menu_dietetico,@precios)).to eq([66.8,33.4,41.75])
+      expect(generar_precio(@menu_dietetico2,@precios2)).to eq([64,24,40])
+    end
   end
 end
