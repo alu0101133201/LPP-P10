@@ -105,7 +105,13 @@ end
 
 
 
+def generar_precio(menu,precios)
 
+  factor_multiplicativo = menu.max
+  precios.collect { |x| (x*factor_multiplicativo.huella_nutricional).round(2)}
+
+
+end
 
 
 
