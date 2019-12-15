@@ -630,7 +630,7 @@ end
 
 
 
-RSpec.describe Plato do
+RSpec.describe Plato2 do
 
   before (:all) do
 
@@ -651,17 +651,35 @@ RSpec.describe Plato do
     @listac_c = Lista.new
     @listae = Lista.new
     @listae_c = Lista.new
-
+    @listav = Lista.new
+    @listav_c = Lista.new
+    @listavegr = Lista.new
+    @listavegr_c = Lista.new
 
     @listac.insertar_multi_cabeza( [ @alim1,@alim10,@alim11,@alim12,@alim5 ])
     @listac_c.insertar_multi_cabeza([400,200,400,200,100])
 
     @listae.insertar_multi_cabeza( [ @alim3,@alim5,@alim9 ])
-    @listae_c.insertar_multi_cabeza([1000,400,700])
+    @listae_c.insertar_multi_cabeza([1500,300,800])
 
-    @plato1 = Plato2.new("Plato de carne",@listac,@listac_c)
+    @listav.insertar_multi_cabeza( [ @alim1,@alim3,@alim2,@alim5,@alim7 ])
+    @listav_c.insertar_multi_cabeza([1500,700,500,350,400])
+
+    @listavegr.insertar_multi_cabeza( [ @alim8,@alim4,@alim3,@alim9,@alim5 ])
+    @listavegr_c.insertar_multi_cabeza( [ 200,500,250,350,800 ])
+
+    @plato1 = Plato2.new("plato de carne",@listac,@listac_c)
     @plato2 = Plato2.new("plato español",@listae,@listae_c)
+    @plato3 = Plato2.new("plato vasco",@listav,@listav_c)
+    @plato4 = Plato2.new("plato vegetariano",@listavegr,@listavegr_c)
 
+    @menu_dietetico = [@plato1,@plato2,@plato3]
+    @precios = [40,20,25]
+
+    @menu_dietetico2 = [@plato1,@plato4,@plato3]
+    @precios2 = [40,15,25]
+
+  
   end
 
   context "Pruebas respecto a la modificación de la clase plato (práct 09)" do
@@ -670,6 +688,14 @@ RSpec.describe Plato do
       
       expect(@plato1.huella_nutricional).to eq(1.2)
       expect(@plato2.huella_nutricional).to eq(1.67)
+      expect(@plato3.huella_nutricional).to eq(1.6)
+      expect(@plato4.huella_nutricional).to eq(1.3)
+
+    end
+    it "Prueba para la obtención del plato con máxima huella nutricional de un menú" do
+
+      expect(@menu_dietetico.max).to eq(@plato2)
+      expect(@menu_dietetico2.max).to eq(@plato3)
 
     end
   end
