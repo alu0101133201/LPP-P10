@@ -1,4 +1,5 @@
 #Clase que define el objeto plato 2. Es hijo de la clase plato
+# Autor:: Sergio Guerra Arencibia
 
 class Plato2 < Plato
 
@@ -7,7 +8,7 @@ class Plato2 < Plato
 
   # === Método initialize
   # Inicializa la lista con sus atributos 3 atributos
-  #Parámetros: nombre lista con los alimentos, lista con las cantidades 
+  # Parámetros: nombre lista con los alimentos, lista con las cantidades 
   def initialize(x,y,z)
     super(x,y,z)
   end

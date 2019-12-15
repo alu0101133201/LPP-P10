@@ -1,3 +1,5 @@
+#Funciones externas
+
 def impacto_ambiental_h(alimentos)
 
   proteinas = 0

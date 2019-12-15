@@ -1,4 +1,5 @@
 #Clase que definirá la clase plato (padre)
+# Autor:: Sergio Guerra Arencibia
 
 class Plato
 
