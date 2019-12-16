@@ -1,15 +1,15 @@
-Sun, 15 Dec 2019 20:50:13 +0000
+Mon, 16 Dec 2019 20:34:08 +0000
 ./lib/Pract6/nodo.rb	Sun, 15 Dec 2019 20:46:36 +0000
 ./lib/Pract6/plato2.rb	Sun, 15 Dec 2019 20:46:36 +0000
 ./lib/Pract6/lista.rb	Sun, 15 Dec 2019 20:46:36 +0000
 ./lib/Pract6/funciones_ambientales.rb	Sun, 15 Dec 2019 20:46:36 +0000
-./lib/Pract6/alimento.rb	Sun, 15 Dec 2019 20:50:07 +0000
+./lib/Pract6/alimento.rb	Mon, 16 Dec 2019 20:34:02 +0000
 ./lib/Pract6/version.rb	Wed, 13 Nov 2019 21:00:59 +0000
 ./lib/Pract6/plato.rb	Sun, 15 Dec 2019 20:46:36 +0000
 ./lib/Pract6.rb	Sun, 15 Dec 2019 20:46:36 +0000
 ./Gemfile	Wed, 13 Nov 2019 21:00:59 +0000
 ./Guardfile	Fri, 22 Nov 2019 01:18:21 +0000
-./README.md	Wed, 27 Nov 2019 22:46:06 +0000
+./README.md	Sun, 15 Dec 2019 21:07:27 +0000
 ./Gemfile.lock	Mon, 18 Nov 2019 22:09:50 +0000
 ./bin/setup	Wed, 13 Nov 2019 21:00:59 +0000
 ./bin/console	Wed, 13 Nov 2019 21:00:59 +0000

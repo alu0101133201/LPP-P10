@@ -254,13 +254,13 @@
           
           <h3 id="method-c-new-label-M-C3-A9todo+initialize">Método initialize<span><a href="#method-c-new-label-M-C3-A9todo+initialize">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
-<p>Inicializa la el alimento con sus valores asignados</p>
+<p>Inicializa la el alimento con sus valores asignados @param nombre, proteinas, carbohidratos, lípidos, gei y terreno</p>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 17</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 18</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span> (<span class="ruby-identifier">n</span>,<span class="ruby-identifier">p</span>,<span class="ruby-identifier">c</span>,<span class="ruby-identifier">l</span>,<span class="ruby-identifier">g</span>,<span class="ruby-identifier">t</span>)
 
   <span class="ruby-ivar">@nombre</span>,<span class="ruby-ivar">@proteinas</span>,<span class="ruby-ivar">@carbohidratos</span>,<span class="ruby-ivar">@lipidos</span> = <span class="ruby-identifier">n</span>, <span class="ruby-identifier">p</span>, <span class="ruby-identifier">c</span>, <span class="ruby-identifier">l</span>
@@ -298,15 +298,16 @@
 
         <div class="method-description">
           
-          <h3 id="method-i-3C-3D-3E-label-M-C3-A9todo+-3C-3D-3E+">Método &lt;=&gt; <span><a href="#method-i-3C-3D-3E-label-M-C3-A9todo+-3C-3D-3E+">&para;</a> <a href="#top">&uarr;</a></span></h3>
+          <pre>=== Método &lt;=&gt; 
+Método para hacer la clase comparable</pre>
 
-<p>Método para hacer la clase comparable</p>
+<p>@param Recibe otro objeto alimento</p>
           
           
 
           
           <div class="method-source-code" id="3C-3D-3E-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 92</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 101</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
   <span class="ruby-identifier">energia</span>(<span class="ruby-value">100</span>) <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">energia</span>(<span class="ruby-value">100</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -333,15 +334,16 @@
 
         <div class="method-description">
           
-          <h3 id="method-i-ch-label-M-C3-A9todo+ch+">Método ch <span><a href="#method-i-ch-label-M-C3-A9todo+ch+">&para;</a> <a href="#top">&uarr;</a></span></h3>
+          <pre>=== Método ch 
+método que devuelve la cantidad de carbohidratos</pre>
 
-<p>método que devuelve la cantidad de carbohidratos</p>
+<p>@param Recibe la cantidad de alimento para la que se quieren calcular los carbohidratos</p>
           
           
 
           
           <div class="method-source-code" id="ch-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 32</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">ch</span>(<span class="ruby-identifier">cantidad</span>)
   <span class="ruby-keyword">return</span>(<span class="ruby-ivar">@carbohidratos</span><span class="ruby-operator">*</span>(<span class="ruby-identifier">cantidad</span><span class="ruby-operator">/</span><span class="ruby-value">100</span>))
 <span class="ruby-keyword">end</span></pre>
@@ -368,15 +370,16 @@
 
         <div class="method-description">
           
-          <h3 id="method-i-energia-label-M-C3-A9todo+energia+">Método energia <span><a href="#method-i-energia-label-M-C3-A9todo+energia+">&para;</a> <a href="#top">&uarr;</a></span></h3>
+          <pre>=== Método energia 
+Devuelve la cantidad</pre>
 
-<p>Devuelve la cantidad de alimento dada una cantidad del mismo</p>
+<p>@param Recibe la cantidad de alimento para la que se quieren calcular la energía</p>
           
           
 
           
           <div class="method-source-code" id="energia-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 67</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 74</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">energia</span>(<span class="ruby-identifier">cantidad</span>)
 
   (<span class="ruby-identifier">prot</span>(<span class="ruby-identifier">cantidad</span>)<span class="ruby-operator">*</span><span class="ruby-value">4.0</span>) <span class="ruby-operator">+</span> (<span class="ruby-identifier">ch</span>(<span class="ruby-identifier">cantidad</span>)<span class="ruby-operator">*</span><span class="ruby-value">4.0</span>) <span class="ruby-operator">+</span> (<span class="ruby-identifier">lip</span>(<span class="ruby-identifier">cantidad</span>)<span class="ruby-operator">*</span><span class="ruby-value">9.0</span>)
@@ -405,15 +408,16 @@
 
         <div class="method-description">
           
-          <h3 id="method-i-energia_mayor-label-M-C3-A9todo+energia_mayor+">Método <a href="Alimento.html#method-i-energia_mayor"><code>energia_mayor</code></a> <span><a href="#method-i-energia_mayor-label-M-C3-A9todo+energia_mayor+">&para;</a> <a href="#top">&uarr;</a></span></h3>
+          <pre>=== Método energia_mayor 
+Devuelve el alimento con mayor energía</pre>
 
-<p>Devuelve el alimento con mayor energía</p>
+<p>@param Recibe otro objeto alimento</p>
           
           
 
           
           <div class="method-source-code" id="energia_mayor-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 75</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 83</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">energia_mayor</span>(<span class="ruby-identifier">alimento</span>)
 
   <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-string">&quot;Se espera como argumento un alimento&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">alimento</span>.<span class="ruby-identifier">is_a?</span><span class="ruby-constant">Alimento</span>
@@ -449,15 +453,16 @@
 
         <div class="method-description">
           
-          <h3 id="method-i-g-label-M-C3-A9todo+g">Método g<span><a href="#method-i-g-label-M-C3-A9todo+g">&para;</a> <a href="#top">&uarr;</a></span></h3>
+          <pre>=== Método g
+método que devuelve la cantidad de gases</pre>
 
-<p>método que devuelve la cantidad de gases</p>
+<p>@param Recibe la cantidad de alimento para la que se quieren calcular los gases efecto invernadero emitidos</p>
           
           
 
           
           <div class="method-source-code" id="g-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 44</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 49</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">g</span>(<span class="ruby-identifier">cantidad</span>)
   <span class="ruby-keyword">return</span>(<span class="ruby-ivar">@gei</span><span class="ruby-operator">*</span>(<span class="ruby-identifier">cantidad</span><span class="ruby-operator">/</span><span class="ruby-value">100</span>))
 <span class="ruby-keyword">end</span></pre>
@@ -484,15 +489,16 @@
 
         <div class="method-description">
           
-          <h3 id="method-i-lip-label-M-C3-A9todo+lip">Método lip<span><a href="#method-i-lip-label-M-C3-A9todo+lip">&para;</a> <a href="#top">&uarr;</a></span></h3>
+          <pre>=== Método lip
+método que devuelve la cantidad de lipidos</pre>
 
-<p>método que devuelve la cantidad de lipidos</p>
+<p>@param Recibe la cantidad de alimento para la que se quieren calcular los lípidos</p>
           
           
 
           
           <div class="method-source-code" id="lip-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 38</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 42</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">lip</span>(<span class="ruby-identifier">cantidad</span>)
   <span class="ruby-keyword">return</span>(<span class="ruby-ivar">@lipidos</span><span class="ruby-operator">*</span>(<span class="ruby-identifier">cantidad</span><span class="ruby-operator">/</span><span class="ruby-value">100</span>))
 <span class="ruby-keyword">end</span></pre>
@@ -519,15 +525,16 @@
 
         <div class="method-description">
           
-          <h3 id="method-i-prot-label-M-C3-A9todo+prot+">Método prot <span><a href="#method-i-prot-label-M-C3-A9todo+prot+">&para;</a> <a href="#top">&uarr;</a></span></h3>
+          <pre>=== Método prot 
+método que devuelve la cantidad de proteinas</pre>
 
-<p>método que devuelve la cantidad de proteinas</p>
+<p>@param Recibe la cantidad de alimento para la que se quieren calcular las proteinas</p>
           
           
 
           
           <div class="method-source-code" id="prot-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 26</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 28</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">prot</span>(<span class="ruby-identifier">cantidad</span>)
   <span class="ruby-keyword">return</span>(<span class="ruby-ivar">@proteinas</span><span class="ruby-operator">*</span>(<span class="ruby-identifier">cantidad</span><span class="ruby-operator">/</span><span class="ruby-value">100</span>))  
 <span class="ruby-keyword">end</span></pre>
@@ -554,15 +561,16 @@
 
         <div class="method-description">
           
-          <h3 id="method-i-t-label-M-C3-A9todo+t">Método t<span><a href="#method-i-t-label-M-C3-A9todo+t">&para;</a> <a href="#top">&uarr;</a></span></h3>
+          <pre>=== Método t
+método que devuelve la cantidad de terreno</pre>
 
-<p>método que devuelve la cantidad de terreno</p>
+<p>@param Recibe la cantidad de alimento para la que se quieren calcular el terreno usado</p>
           
           
 
           
           <div class="method-source-code" id="t-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 50</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 56</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">t</span>(<span class="ruby-identifier">cantidad</span>)
   <span class="ruby-keyword">return</span>(<span class="ruby-ivar">@terreno</span><span class="ruby-operator">*</span>(<span class="ruby-identifier">cantidad</span><span class="ruby-operator">/</span><span class="ruby-value">100</span>))
 <span class="ruby-keyword">end</span></pre>
@@ -597,7 +605,7 @@
 
           
           <div class="method-source-code" id="to_s-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 59</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/alimento.rb, line 65</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
 
   <span class="ruby-node">&quot;(#{@nombre}, #{@proteinas}, #{@carbohidratos}, #{@lipidos}, #{@gei}, #{@terreno})&quot;</span>
