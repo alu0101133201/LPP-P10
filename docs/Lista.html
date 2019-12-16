@@ -246,7 +246,7 @@
 
           
           <div class="method-source-code" id="each-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 169</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 175</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">each</span>
 
   <span class="ruby-identifier">x</span> = <span class="ruby-ivar">@head</span>
@@ -283,13 +283,13 @@
           
           <h3 id="method-i-extraer_cabeza-label-M-C3-A9todo+extraer_cabeza+">Método <a href="Lista.html#method-i-extraer_cabeza"><code>extraer_cabeza</code></a> <span><a href="#method-i-extraer_cabeza-label-M-C3-A9todo+extraer_cabeza+">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
-<p>Método para extraer un elemento por la cabeza en la cabeza</p>
+<p>Método para extraer un elemento por la cabeza en la cabeza Recibe el elemento que se desea extraer</p>
           
           
 
           
           <div class="method-source-code" id="extraer_cabeza-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 119</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 124</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">extraer_cabeza</span>
 
   <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@head</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)
@@ -336,13 +336,13 @@
           
           <h3 id="method-i-extraer_cola-label-M-C3-A9todo+extraer_cola">Método <a href="Lista.html#method-i-extraer_cola"><code>extraer_cola</code></a><span><a href="#method-i-extraer_cola-label-M-C3-A9todo+extraer_cola">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
-<p>Método para extraer un elemento por la cabeza en la cola</p>
+<p>Método para extraer un elemento por la cabeza en la cola Recibe el elemento que se desea extraer</p>
           
           
 
           
           <div class="method-source-code" id="extraer_cola-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 144</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 150</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">extraer_cola</span>
 
   <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@tail</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)
@@ -390,12 +390,14 @@
           <h3 id="method-i-insertar_cabeza-label-M-C3-A9todo+insertar_cabeza">Método <a href="Lista.html#method-i-insertar_cabeza"><code>insertar_cabeza</code></a><span><a href="#method-i-insertar_cabeza-label-M-C3-A9todo+insertar_cabeza">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Método para insertar un elemento por la cabeza en la lista</p>
+
+<p>Recibe el elemento que se desea insertar</p>
           
           
 
           
           <div class="method-source-code" id="insertar_cabeza-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 62</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 63</span>
   <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">insertar_cabeza</span>(<span class="ruby-identifier">x</span>)
 
    <span class="ruby-identifier">nodo</span> = <span class="ruby-constant">Nodo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">x</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>) 
@@ -437,12 +439,14 @@
           <h3 id="method-i-insertar_cola-label-M-C3-A9todo+insertar_cola">Método <a href="Lista.html#method-i-insertar_cola"><code>insertar_cola</code></a><span><a href="#method-i-insertar_cola-label-M-C3-A9todo+insertar_cola">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Método para insertar un elemento por la cola en la lista</p>
+
+<p>Recibe el elemento que se desea insertar</p>
           
           
 
           
           <div class="method-source-code" id="insertar_cola-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 80</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 82</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">insertar_cola</span>(<span class="ruby-identifier">x</span>)
 
 
@@ -487,12 +491,14 @@
           <h3 id="method-i-insertar_multi_cabeza-label-M-C3-A9todo+insertar_multi_cabeza">Método <a href="Lista.html#method-i-insertar_multi_cabeza"><code>insertar_multi_cabeza</code></a><span><a href="#method-i-insertar_multi_cabeza-label-M-C3-A9todo+insertar_multi_cabeza">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Método para insertar varios elementos por la cabeza en la lista</p>
+
+<p>Recibe un array con los elementos que se desea insertar</p>
           
           
 
           
           <div class="method-source-code" id="insertar_multi_cabeza-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 102</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 105</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">insertar_multi_cabeza</span>(<span class="ruby-identifier">array</span>)
 
   <span class="ruby-identifier">array</span>.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">insertar_cabeza</span>(<span class="ruby-identifier">x</span>) }
@@ -524,13 +530,13 @@
           
           <h3 id="method-i-insertar_multi_cola-label-M-C3-A9todo+insertar_multi_cola">Método <a href="Lista.html#method-i-insertar_multi_cola"><code>insertar_multi_cola</code></a><span><a href="#method-i-insertar_multi_cola-label-M-C3-A9todo+insertar_multi_cola">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
-<p>Método para insertar varios elementos por la cabeza en la cola</p>
+<p>Método para insertar varios elementos por la cabeza en la cola Recibe un array con los elementos que se desea insertar</p>
           
           
 
           
           <div class="method-source-code" id="insertar_multi_cola-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 111</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/lista.rb, line 115</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">insertar_multi_cola</span>(<span class="ruby-identifier">array</span>)
 
   <span class="ruby-identifier">array</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">insertar_cola</span>(<span class="ruby-identifier">x</span>) }

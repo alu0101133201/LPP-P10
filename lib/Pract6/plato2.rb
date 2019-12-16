@@ -8,7 +8,7 @@ class Plato2 < Plato
 
   # === Método initialize
   # Inicializa la lista con sus atributos 3 atributos
-  # Parámetros: nombre lista con los alimentos, lista con las cantidades 
+  # Parámetros: nombre, lista con los alimentos, lista con las cantidades 
   def initialize(x,y,z)
     super(x,y,z)
   end
@@ -112,6 +112,7 @@ class Plato2 < Plato
   
   # === Método <=>
   # Redefine el método <=> para hacer comparable en base a la huella nutricional 
+  # Recibe otro elemento plato2
   def <=>(other) 
 
     huella_nutricional <=> other.huella_nutricional

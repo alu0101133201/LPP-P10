@@ -59,6 +59,7 @@ class Lista
 
   # === Método insertar_cabeza
   # Método para insertar un elemento por la cabeza en la lista  
+  # Recibe el elemento que se desea insertar
   def insertar_cabeza(x)
 
    nodo = Nodo.new(x,nil,nil) 
@@ -77,6 +78,7 @@ end
   
   # === Método insertar_cola
   # Método para insertar un elemento por la cola en la lista  
+  # Recibe el elemento que se desea insertar
   def insertar_cola(x)
 
 
@@ -99,6 +101,7 @@ end
 
   # === Método insertar_multi_cabeza
   # Método para insertar varios elementos por la cabeza en la lista  
+  # Recibe un array con los elementos que se desea insertar
   def insertar_multi_cabeza(array)
 
     array.reverse.each { |x| insertar_cabeza(x) }
@@ -108,6 +111,7 @@ end
 
   # === Método insertar_multi_cola
   # Método para insertar varios elementos por la cabeza en la cola
+  # Recibe un array con los elementos que se desea insertar
   def insertar_multi_cola(array)
   
     array.each { |x| insertar_cola(x) }
@@ -116,6 +120,7 @@ end
 
   # === Método extraer_cabeza 
   # Método para extraer un elemento por la cabeza en la cabeza
+  # Recibe el elemento que se desea extraer
   def extraer_cabeza
   
     if(@head != nil)
@@ -141,6 +146,7 @@ end
 
   # === Método extraer_cola
   # Método para extraer un elemento por la cabeza en la cola
+  # Recibe el elemento que se desea extraer
   def extraer_cola
 
     if(@tail != nil)

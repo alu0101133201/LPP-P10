@@ -148,13 +148,13 @@
 
         <div class="method-description">
           
-          
+          <p>Función que calcula los gases de efecto invernadero emitidos anualmente por un conjunto de alimentos Recibe un conjunto de alimentos y un conjunto de cantidades</p>
           
           
 
           
           <div class="method-source-code" id="gei_anual-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 78</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 86</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">gei_anual</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
 
   <span class="ruby-keyword">return</span>((<span class="ruby-identifier">gei_diario</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)<span class="ruby-operator">*</span><span class="ruby-value">365</span>).<span class="ruby-identifier">round</span>(<span class="ruby-value">2</span>))
@@ -182,13 +182,13 @@
 
         <div class="method-description">
           
-          
+          <p>Función que calcula los gases de efecto invernadero emitidos a diario por un conjunto de alimentos Recibe un conjunto de alimentos y un conjunto de cantidades</p>
           
           
 
           
           <div class="method-source-code" id="gei_diario-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 59</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 65</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">gei_diario</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
 
   <span class="ruby-identifier">aux</span> = <span class="ruby-identifier">x</span>.<span class="ruby-identifier">head</span>
@@ -228,13 +228,13 @@
 
         <div class="method-description">
           
-          
+          <p>Función que modifica los precios de un menú en función de la máxima huella nutricional del menú Recibe un menú (array de platos) y un array de precios</p>
           
           
 
           
           <div class="method-source-code" id="generar_precio-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 110</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 124</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generar_precio</span>(<span class="ruby-identifier">menu</span>,<span class="ruby-identifier">precios</span>)
 
   <span class="ruby-identifier">factor_multiplicativo</span> = <span class="ruby-identifier">menu</span>.<span class="ruby-identifier">max</span>
@@ -265,13 +265,16 @@
 
         <div class="method-description">
           
-          <p>Funciones externas</p>
+          <p>Función que calculo el impacto ambiental diario de un hombre</p>
+
+<pre class="ruby"><span class="ruby-constant">Recibe</span> <span class="ruby-identifier">un</span> <span class="ruby-identifier">conjunto</span> <span class="ruby-identifier">enumerable</span> <span class="ruby-identifier">de</span> <span class="ruby-identifier">alimentos</span>
+</pre>
           
           
 
           
           <div class="method-source-code" id="impacto_ambiental_h-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 3</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 5</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">impacto_ambiental_h</span>(<span class="ruby-identifier">alimentos</span>)
 
   <span class="ruby-identifier">proteinas</span> = <span class="ruby-value">0</span>
@@ -320,13 +323,16 @@
 
         <div class="method-description">
           
-          
+          <p>Función que calculo el impacto ambiental diario de una mujer</p>
+
+<pre class="ruby"><span class="ruby-constant">Recibe</span> <span class="ruby-identifier">un</span> <span class="ruby-identifier">conjunto</span> <span class="ruby-identifier">enumerable</span> <span class="ruby-identifier">de</span> <span class="ruby-identifier">alimentos</span>
+</pre>
           
           
 
           
           <div class="method-source-code" id="impacto_ambiental_m-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 31</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">impacto_ambiental_m</span>(<span class="ruby-identifier">alimentos</span>)
 
   <span class="ruby-identifier">proteinas</span> = <span class="ruby-value">0</span>
@@ -375,13 +381,13 @@
 
         <div class="method-description">
           
-          
+          <p>Función que calcula el terreno empleado anualmente por un conjunto de alimentos Recibe un conjunto de alimentos y un conjunto de cantidades</p>
           
           
 
           
           <div class="method-source-code" id="t_anual-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 101</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 114</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">t_anual</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
 
   <span class="ruby-keyword">return</span>((<span class="ruby-identifier">t_diario</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)<span class="ruby-operator">*</span><span class="ruby-value">365</span>).<span class="ruby-identifier">round</span>(<span class="ruby-value">2</span>))
@@ -409,13 +415,13 @@
 
         <div class="method-description">
           
-          
+          <p>Función que calcula el terreno empleado a diario por un conjunto de alimentos Recibe un conjunto de alimentos y un conjunto de cantidades</p>
           
           
 
           
           <div class="method-source-code" id="t_diario-source">
-            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 84</span>
+            <pre><span class="ruby-comment"># File lib/Pract6/funciones_ambientales.rb, line 94</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">t_diario</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
 
   <span class="ruby-identifier">aux</span> = <span class="ruby-identifier">x</span>.<span class="ruby-identifier">head</span>

@@ -1,5 +1,7 @@
-#Funciones externas
+# = Funciones externas
 
+#Función que calculo el impacto ambiental diario de un hombre
+# Recibe un conjunto enumerable de alimentos
 def impacto_ambiental_h(alimentos)
 
   proteinas = 0
@@ -28,6 +30,8 @@ end
 
 
 
+#Función que calculo el impacto ambiental diario de una mujer
+# Recibe un conjunto enumerable de alimentos
 def impacto_ambiental_m(alimentos)
 
   proteinas = 0
@@ -56,6 +60,8 @@ end
 
 
 
+# Función que calcula los gases de efecto invernadero emitidos a diario por un conjunto de alimentos
+# Recibe un conjunto de alimentos y un conjunto de cantidades
 def gei_diario(x,y)
 
   aux = x.head
@@ -75,12 +81,16 @@ end
 
 
 
+# Función que calcula los gases de efecto invernadero emitidos anualmente por un conjunto de alimentos
+# Recibe un conjunto de alimentos y un conjunto de cantidades
 def gei_anual(x,y)
 
   return((gei_diario(x,y)*365).round(2))
 end
 
 
+# Función que calcula el terreno empleado a diario por un conjunto de alimentos
+# Recibe un conjunto de alimentos y un conjunto de cantidades
 def t_diario(x,y)
 
   aux = x.head
@@ -98,6 +108,9 @@ def t_diario(x,y)
   return t.round(2)
 end
 
+
+# Función que calcula el terreno empleado anualmente por un conjunto de alimentos
+# Recibe un conjunto de alimentos y un conjunto de cantidades
 def t_anual(x,y)
 
   return((t_diario(x,y)*365).round(2))
@@ -106,7 +119,8 @@ end
 
 
 
-
+#Función que modifica los precios de un menú en función de la máxima huella nutricional del menú
+#Recibe un menú (array de platos) y un array de precios
 def generar_precio(menu,precios)
 
   factor_multiplicativo = menu.max
