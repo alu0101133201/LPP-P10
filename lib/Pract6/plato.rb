@@ -45,6 +45,7 @@ class Plato
 
   # === Método <=>
   # Hace que los platos sean comparables en función a su vct
+  # Recibe otro elemento Plato
   def <=>(other)
        vct <=> other.vct 
   end
