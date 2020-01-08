@@ -29,12 +29,63 @@ class MenuDSL
 
     temporal = []
     temporal << "#{args[:descripcion] }" if args[:descripcion]
-    temporal << "#{args[:plat]} " if args[:plat]
+    temporal << args[:plat]  if args[:plat]
     temporal << "#{args[:precio]}" if args[:precio]
 
     @componentes << temporal
 
   end
 
+  def to_s
+ 
+ 
+    cadena = ""
+    cadena += "#{name} - #{desc}\nComponentes:\n"
+
+    for i in @componentes
+      cadena += i[0]
+      cadena += " - "
+      cadena += i[2]
+      cadena += "€\n"
+    end
+
+    cadena += "Valores nutricionales y ambientales:\n "
+
+    for i in @componentes
+      cadena += i[1].p.to_s
+      cadena += " "
+      cadena += i[1].c.to_s
+      cadena += " "
+      cadena += i[1].l.to_s
+      cadena += " "
+      cadena += i[1].gei.to_s
+      cadena += " "
+      cadena += i[1].ter.to_s
+      cadena += "\n "
+    end
+    
+    return cadena
+
+
+
+  end
+
 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

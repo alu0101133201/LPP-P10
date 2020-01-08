@@ -780,17 +780,28 @@ RSpec.describe PlatoDSL do
   context "Pruebas de clase platoDSL" do
 
     it "Prueba de la instanciación correcta de un platoDSL" do
+
       expect(@plato1.name).to eq("Tofu con huevos")
       expect(@plato1.desc).to eq("Sencillo plato de tofu con huevos")
-      expect(@plato1.alimentos).to eq([[@alim8.to_s,"200"],[@alim4.to_s,"200"]])
+      expect(@plato1.to_s).to eq("Tofu con huevos - Sencillo plato de tofu con huevos -> tofu-200 ; huevos-200 ; ")
+    end
+
+    it "Pruebas de los metodos nutricionales y ambientales de platoDSL"do
+      expect(@plato1.gei).to eq(12.4)
+      expect(@plato1.ter).to eq(15.8)
+      expect(@plato1.p).to eq(42.0)
+      expect(@plato1.c).to eq(6.0)
+      expect(@plato1.l).to eq(31.6)
     end
 
     it "Pruebas de menúDSL" do
       expect(@menu.name).to eq("Menú del día")
+
       expect(@menu.desc).to eq("Maravilloso menú, sano y delicioso a partes iguales")
-      expect(@menu.to_s).to eq("Menú del día - Maravilloso menú, sano y delicioso a partes iguales
-                                Sencillo plato de tofu con hueovs - 5.50
-                                Cremoso postre de leche y café - 1.50")
+
+      expect(@menu.to_s).to eq("Menú del día - Maravilloso menú, sano y delicioso a partes iguales\n\
+Componentes:\nSencillo plato de tofu con huevos - 5.5€\nCremoso postre de leche y café - 1.5€\n\
+Valores nutricionales y ambientales:\n 42.0 6.0 31.6 12.4 15.8\n 6.6 9.6 6.4 6.4 17.8\n ")
     end
 
   end
