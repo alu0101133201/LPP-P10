@@ -714,19 +714,6 @@ RSpec.describe PlatoDSL do
 
   before (:all) do
 
-    @alim1 = Alimento.new("carne_de_vaca", 21.1, 0.0, 3.1, 50.0, 164.0)
-    @alim2 = Alimento.new("chocolate", 5.3, 47.0, 30.0, 2.3, 3.4)
-    @alim3 = Alimento.new("lentejas", 23.5, 52.0, 1.4, 0.4, 3.4)
-    @alim4 = Alimento.new("huevos", 13.0, 1.1, 11.0, 4.2, 5.7)
-    @alim5 = Alimento.new("cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
-    @alim6 = Alimento.new("leche_de_vaca", 3.3, 4.8, 3.2, 3.2, 8.9)
-    @alim7 = Alimento.new("café", 0.1, 0.0, 0.0, 0.4, 0.3)
-    @alim8 = Alimento.new("tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
-    @alim9 = Alimento.new("nuez", 20.0, 21.0, 54.0, 0.3, 7.9)
-    @alim10 = Alimento.new("carne_de_cordero", 18.9, 0.0, 17.0, 20, 185.0)
-    @alim11 = Alimento.new("queso", 25.0, 1.3, 33.0, 11.0, 41.0)
-    @alim12 = Alimento.new("pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
-
     alim4 = Alimento.new("huevos", 13.0, 1.1, 11.0, 4.2, 5.7)
     alim8 = Alimento.new("tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
     alim6 = Alimento.new("leche_de_vaca", 3.3, 4.8, 3.2, 3.2, 8.9)
@@ -748,6 +735,20 @@ RSpec.describe PlatoDSL do
                gramos: 50 
     end
 
+    @alim1 = Alimento.new("carne_de_vaca", 21.1, 0.0, 3.1, 50.0, 164.0)
+    @alim2 = Alimento.new("chocolate", 5.3, 47.0, 30.0, 2.3, 3.4)
+    @alim3 = Alimento.new("lentejas", 23.5, 52.0, 1.4, 0.4, 3.4)
+    @alim4 = Alimento.new("huevos", 13.0, 1.1, 11.0, 4.2, 5.7)
+    @alim5 = Alimento.new("cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
+    @alim6 = Alimento.new("leche_de_vaca", 3.3, 4.8, 3.2, 3.2, 8.9)
+    @alim7 = Alimento.new("café", 0.1, 0.0, 0.0, 0.4, 0.3)
+    @alim8 = Alimento.new("tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
+    @alim9 = Alimento.new("nuez", 20.0, 21.0, 54.0, 0.3, 7.9)
+    @alim10 = Alimento.new("carne_de_cordero", 18.9, 0.0, 17.0, 20, 185.0)
+    @alim11 = Alimento.new("queso", 25.0, 1.3, 33.0, 11.0, 41.0)
+    @alim12 = Alimento.new("pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
+
+
     @plato1 = PlatoDSL.new("Tofu con huevos") do
       descripcion "Sencillo plato de tofu con huevos"
       alimento alim: alim8,
@@ -765,7 +766,6 @@ RSpec.describe PlatoDSL do
     end
 
     @menu = MenuDSL.new("Menú del día") do
-
        descripcion "Maravilloso menú, sano y delicioso a partes iguales"
        componente descripcion: "Sencillo plato de tofu con huevos",
                   plat: plato1,
@@ -785,11 +785,10 @@ RSpec.describe PlatoDSL do
       expect(@plato1.alimentos).to eq([[@alim8.to_s,"200"],[@alim4.to_s,"200"]])
     end
 
-      it "Prueba de la instanciación correcta de un platoDSL" do
-        expect(@menu.name).to eq("Menú del día")
-        expect(@menu.desc).to eq("Maravilloso menú, sano y delicioso a partes iguales")
-        expect(@menu.componentes).to eq("[['Sencillo plato de tofu con huevos','Tofu con huevos',5.50]]")
+    it "Pruebas de menúDSL" do
+      expect(@menu.name).to eq("Menú del día")
+      expect(@menu.desc).to eq("Maravilloso menú, sano y delicioso a partes iguales")
+    end
 
-      end
   end
 end

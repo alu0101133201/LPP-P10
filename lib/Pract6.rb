@@ -16,6 +16,7 @@ require "Pract6/lista.rb"
 require "Pract6/plato.rb"
 require "Pract6/plato2.rb"
 require "Pract6/platoDSL.rb"
+require "Pract6/menuDSL.rb"
 
 module Pract6
   class Error < StandardError; end
