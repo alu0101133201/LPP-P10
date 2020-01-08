@@ -729,10 +729,10 @@ RSpec.describe PlatoDSL do
 
     @plato = PlatoDSL.new("Tofu con huevos") do
       
-      nombre "Sencillo plato de tofu con huevos"
-      alimento :descripcion => "Tofu",
+      descripcion "Sencillo plato de tofu con huevos"
+      alimento @alim8,
                :gramos => 200
-      alimento :descripcion => "Huevos",
+      alimento @alim4,
                :gramos => 200
     end
 
@@ -743,7 +743,10 @@ RSpec.describe PlatoDSL do
 
     it "Prueba de la instanciación correcta de un platoDSL" do
       
-      expect(@plato1.huella_nutricional).to eq(1.2)
+      expect(@plato.name).to eq("Tofu con huevos")
+      expect(@plato.descripcion).to eq("Sencillo plato de tofu con huevos")
+      expect(@plato.alimentos).to eq([[@alim8,200],[@alim4,200]])
+      
 
     end
   end
