@@ -788,6 +788,9 @@ RSpec.describe PlatoDSL do
     it "Pruebas de menúDSL" do
       expect(@menu.name).to eq("Menú del día")
       expect(@menu.desc).to eq("Maravilloso menú, sano y delicioso a partes iguales")
+      expect(@menu.to_s).to eq("Menú del día - Maravilloso menú, sano y delicioso a partes iguales
+                                Sencillo plato de tofu con hueovs - 5.50
+                                Cremoso postre de leche y café - 1.50")
     end
 
   end
