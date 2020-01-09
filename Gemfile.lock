@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Pract6 (0.1.0)
+    alu0101133201 (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -82,7 +82,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  Pract6!
+  alu0101133201!
   bundler (~> 1.17)
   coveralls
   guard

@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "Pract6/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "Pract6"
+  spec.name          = "alu0101133201"
   spec.version       = Pract6::VERSION
   spec.authors       = ["Sergio Guerra"]
   spec.email         = ["alu0101133201@ull.edu.es"]
