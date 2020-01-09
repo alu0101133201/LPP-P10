@@ -13,18 +13,6 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Desarrollo de la práctica "Desarrollo dirigido por pruebas", usando el lenguaje Ruby}
   spec.homepage      = "https://github.com/ULL-ESIT-LPP-1920/tdd-alu0101133201.git"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "https://github.com/ULL-ESIT-LPP-1920/tdd-alu0101133201.git"
-
-    spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/ULL-ESIT-LPP-1920/tdd-alu0101133201.git"
-    spec.metadata["changelog_uri"] = "https://github.com/ULL-ESIT-LPP-1920/tdd-alu0101133201.git"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
